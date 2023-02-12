@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="98. Default">
+      <UniqueIdentifier>{c1d4339f-ea9a-47b1-b273-add8cc36071b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98. Default\Imgui">
+      <UniqueIdentifier>{46ef67f7-0c1f-421a-9f66-021d7685ba61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99. Defines">
+      <UniqueIdentifier>{c407d5ca-dc32-4be5-91c2-94637348e08e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. MainTool">
+      <UniqueIdentifier>{488aa99a-3207-4c87-8d22-dcd43e5b7058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Imgui_Manager">
+      <UniqueIdentifier>{5e42f4af-1aee-4c53-aced-30da8317c543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Levels">
+      <UniqueIdentifier>{af52deda-bfb4-40c6-a83c-fccc5f9867dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject">
+      <UniqueIdentifier>{eee01759-a726-4199-abf5-4debce77deae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Terrain">
+      <UniqueIdentifier>{670b7e72-f7ed-4020-8fbd-6423d0aa3b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Camera">
+      <UniqueIdentifier>{7412cd69-fc18-44d6-a21c-f44ede054225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Effect">
+      <UniqueIdentifier>{36e92e77-7b37-4244-bf84-d7f5324f88de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Cube">
+      <UniqueIdentifier>{e98876d2-f5cf-4349-a8bb-703fc943476b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1">
+      <UniqueIdentifier>{e7f0664e-6dcb-444e-84ea-3dd73a620101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Ring_Top">
+      <UniqueIdentifier>{abe19906-b391-4824-9799-34514c62d41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Rope_Top">
+      <UniqueIdentifier>{216b09d6-6fc2-4d16-9dd3-767372a55376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Ring_Pillar">
+      <UniqueIdentifier>{cdcb49d3-8e3a-4572-a2f7-fce57f96cd94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Light_Tube">
+      <UniqueIdentifier>{30837a87-477a-4518-8f2d-a6dadc6697ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Scoreboard">
+      <UniqueIdentifier>{69ea989f-9b36-4f33-af2d-b52a570b2d42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Pillar">
+      <UniqueIdentifier>{c7fe6c4f-cd1b-4128-b167-b1971bfc0313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Pillar_Attachment">
+      <UniqueIdentifier>{a09c897e-9ddb-4cb1-8ee7-2212e921a13e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Cloth">
+      <UniqueIdentifier>{f646c8be-2e12-49ac-9b4c-8f3168917065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds">
+      <UniqueIdentifier>{6ec4b27b-5068-41ca-9800-8ea8cbb82f6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds\Groun1">
+      <UniqueIdentifier>{65e1a652-22c3-4cf5-ae3e-acfb0c0163e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds\Groun2">
+      <UniqueIdentifier>{2c26f381-73e0-4198-8de7-9e29e277e995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Pos_Light">
+      <UniqueIdentifier>{24a0fc9f-4439-4d57-962a-527be9ec17b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs">
+      <UniqueIdentifier>{787a82f1-6aaf-425f-b0a9-04af1fe1b1f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs\Stairs_02">
+      <UniqueIdentifier>{92dd883d-97a3-4652-8b89-079f4a59ee10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs\Stairs_04">
+      <UniqueIdentifier>{0d668d26-891a-41ae-9d65-154f3f341639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\SM_PD_Banner_01">
+      <UniqueIdentifier>{58d4a307-b5a0-40c7-b0af-5085051334bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster">
+      <UniqueIdentifier>{b85601a8-ef4a-474a-aaef-1581b0ca6f3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster\Poster1">
+      <UniqueIdentifier>{5f89d849-e529-4734-ae29-a781148bd6c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster\Poster2">
+      <UniqueIdentifier>{ef1c4234-e58a-44db-8641-db004cb76aa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\SM_Light_Cone_02">
+      <UniqueIdentifier>{22ce6104-224d-4760-9519-ba27040a1173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh">
+      <UniqueIdentifier>{993a466d-1fb1-45ea-a870-77125eeed51c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_A">
+      <UniqueIdentifier>{6bf790cb-5866-446d-a713-7570b31b3ce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_B">
+      <UniqueIdentifier>{b4efbfea-c259-42ce-8173-e4218811416b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_C">
+      <UniqueIdentifier>{4a093be7-1254-4e44-92e9-4ea4d6f19001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_D">
+      <UniqueIdentifier>{5fd4095e-9b54-44fa-a578-cee564b8fca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_E">
+      <UniqueIdentifier>{4e679271-4b9f-45fa-86ad-daba7a467222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_H">
+      <UniqueIdentifier>{923638e9-09aa-482e-9b1e-a3caa54a1b13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_G">
+      <UniqueIdentifier>{7f768257-85b0-49bc-bf54-b4e886e04f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_I">
+      <UniqueIdentifier>{e145dc08-aefb-42d7-8143-28ded6f18c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_J">
+      <UniqueIdentifier>{0ee271bd-340d-4237-bfbe-ef45452d35d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_K">
+      <UniqueIdentifier>{78f6e8a3-8b30-4b64-be4e-72e97e91e2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh\Fish_L">
+      <UniqueIdentifier>{01623aed-8f0c-413b-b6bf-4384501ae30b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Scoreboard_Ropes">
+      <UniqueIdentifier>{21a04f49-8a40-496c-ac90-4cd5862be26b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI">
+      <UniqueIdentifier>{cb3414c5-93c7-4383-9be4-85c9ead42867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Underpants">
+      <UniqueIdentifier>{574f406a-efcf-430d-8197-8bcb03d8bf90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Boss_HPBar">
+      <UniqueIdentifier>{5bdc17fc-984b-433b-805e-079ace692b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy">
+      <UniqueIdentifier>{7b605dc0-b69d-48d8-be9e-b96f62ee101b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Levels\Terrain_Tool">
+      <UniqueIdentifier>{5d008bfd-47ea-4322-bb41-eb67c6d07005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Levels\Terrain_Tool\TerrainManager">
+      <UniqueIdentifier>{ead3662e-03aa-4135-8cf0-580362f2accd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Levels\Animation_Tool">
+      <UniqueIdentifier>{52fc82f7-cc9b-4361-aeb7-8f16cdf6d462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Levels\UI_Tool">
+      <UniqueIdentifier>{f43eaa6e-587c-4f85-9892-ef0fea5ea3ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character">
+      <UniqueIdentifier>{630df250-7d10-4ef5-9d51-a13f2b87b53b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\MenuBar">
+      <UniqueIdentifier>{80005196-1bd6-4916-9a04-12435052fac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\GameStart_Label">
+      <UniqueIdentifier>{b94fe9e7-c51c-4064-985b-3a9acc8c6b99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Exit_Label">
+      <UniqueIdentifier>{e858a923-2de1-4a22-a2c2-2449e5bf006e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Boss_HP_Energy">
+      <UniqueIdentifier>{ab77efa5-9c26-4791-959d-123af88933d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Light_cone">
+      <UniqueIdentifier>{6656bbf4-fbb5-42ac-97c8-e78719ceac56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Bubble">
+      <UniqueIdentifier>{8db33ae9-ed29-4e3f-9a90-7a4621d82437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim">
+      <UniqueIdentifier>{3b07f92f-537d-4163-af96-877079c60cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim\Boss_Sandy">
+      <UniqueIdentifier>{7d61d441-924c-4d42-99c4-77d1fc99fdc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Head">
+      <UniqueIdentifier>{2a55884d-6fa3-49ad-a212-e0478c82f7e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Body">
+      <UniqueIdentifier>{beb15b25-34d6-4c0a-bb0f-6ec3ceb5e938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim\Patrick">
+      <UniqueIdentifier>{ffd30162-57f9-433a-b2b1-3317d04f6187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\Anim\SpongeBob">
+      <UniqueIdentifier>{8157ad07-2580-4687-a928-2e59be2d1c62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Character\NonAnim">
+      <UniqueIdentifier>{a4d8ea87-f1cf-407f-904b-7f2b942fe70d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Light_cone2">
+      <UniqueIdentifier>{90b4dba3-580b-466e-8c7c-5c32e5a7ce16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField">
+      <UniqueIdentifier>{37eebab8-1156-43fb-94dc-eaa3de133258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Field">
+      <UniqueIdentifier>{283a8feb-5c5c-448b-99b4-cfef387d7fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Taxi">
+      <UniqueIdentifier>{de502f4a-2dc1-49c1-8b8b-503fa92a3433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Gate">
+      <UniqueIdentifier>{de4e1836-4418-477d-8007-afcf98eb7460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Robo">
+      <UniqueIdentifier>{070d9324-3884-43f3-900d-fe2f947b5385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Jelly">
+      <UniqueIdentifier>{ac6bb666-c5d9-480a-a76e-391da75a2e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Grass">
+      <UniqueIdentifier>{82cc7ce7-e05b-48c5-a5ac-2aa7e138c69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelField\Npc">
+      <UniqueIdentifier>{93e086bf-9464-4afd-ac81-9cad61babad2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imconfig.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_dx11.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_win32.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_internal.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_rectpack.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_textedit.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_truetype.h">
+      <Filter>98. Default\Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Tool_Defines.h">
+      <Filter>99. Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MainTool.h">
+      <Filter>00. MainTool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Imgui_Manager.h">
+      <Filter>01. Imgui_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Terrain.h">
+      <Filter>03. Levels\Terrain_Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Terrain.h">
+      <Filter>02.GameObject\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Camera_Free.h">
+      <Filter>02.GameObject\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\TerrainManager.h">
+      <Filter>03. Levels\Terrain_Tool\TerrainManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Cube.h">
+      <Filter>02.GameObject\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SpongeBob.h">
+      <Filter>02.GameObject\Character\Anim\SpongeBob</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ring_Top.h">
+      <Filter>02.GameObject\LevelBoss1\Ring_Top</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Rope_Top.h">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ring_Pillar.h">
+      <Filter>02.GameObject\LevelBoss1\Ring_Pillar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Tube.h">
+      <Filter>02.GameObject\LevelBoss1\Light_Tube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Scoreboard.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Pillar_Attachment.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar_Attachment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Pillar.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Cloth.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ground2.h">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Groun2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ground.h">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Groun1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Pos_Light.h">
+      <Filter>02.GameObject\LevelBoss1\Pos_Light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Stairs_02.h">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_02</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Stairs_04.h">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_04</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SM_PD_Banner_01.h">
+      <Filter>02.GameObject\LevelBoss1\SM_PD_Banner_01</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Poster.h">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Poster2.h">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SM_Light_Cone_02.h">
+      <Filter>02.GameObject\SM_Light_Cone_02</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_A.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_A</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_B.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_B</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_C.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_C</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_D.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_E.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_E</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_G.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_G</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_H.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_I.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_I</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_J.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_J</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_K.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_K</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_L.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_L</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Scoreboard_Ropes.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard_Ropes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_UI.h">
+      <Filter>03. Levels\UI_Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Underpants.h">
+      <Filter>02.GameObject\UI\Underpants</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_HPBar.h">
+      <Filter>02.GameObject\UI\Boss_HPBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Animation.h">
+      <Filter>03. Levels\Animation_Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy.h">
+      <Filter>02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Body.h">
+      <Filter>02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Body</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MenuBar.h">
+      <Filter>02.GameObject\UI\MenuBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Disable_Exit.h">
+      <Filter>02.GameObject\UI\Exit_Label</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Disable_Geme_Start.h">
+      <Filter>02.GameObject\UI\GameStart_Label</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_HP_Energy.h">
+      <Filter>02.GameObject\UI\Boss_HP_Energy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Pink.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Blue.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Green.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Bubble.h">
+      <Filter>02.GameObject\Bubble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Patrick.h">
+      <Filter>02.GameObject\Character\Anim\Patrick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BossSandy_NonAnim.h">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Camera_DirectorMesh.h">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\King_NonAnim.h">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SpongeBob_NonAnim.h">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Patrick_NonAnim.h">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Scoreboard_Broken.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Blue2.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Yellow.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Field.h">
+      <Filter>02.GameObject\LevelField\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Taxi.h">
+      <Filter>02.GameObject\LevelField\Taxi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Gate.h">
+      <Filter>02.GameObject\LevelField\Gate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo.h">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo2.h">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo3.h">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Jelly_Pink.h">
+      <Filter>02.GameObject\LevelField\Jelly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Jelly_Blue.h">
+      <Filter>02.GameObject\LevelField\Jelly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GrassInstance.h">
+      <Filter>02.GameObject\LevelField\Grass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Squidward.h">
+      <Filter>02.GameObject\LevelField\Npc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Man.h">
+      <Filter>02.GameObject\LevelField\Npc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Tree.h">
+      <Filter>02.GameObject\LevelField</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imgui.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_demo.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_dx11.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_win32.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_tables.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_widgets.cpp">
+      <Filter>98. Default\Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>98. Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MainTool.cpp">
+      <Filter>00. MainTool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Imgui_Manager.cpp">
+      <Filter>01. Imgui_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Terrain.cpp">
+      <Filter>03. Levels\Terrain_Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Terrain.cpp">
+      <Filter>02.GameObject\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Camera_Free.cpp">
+      <Filter>02.GameObject\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\TerrainManager.cpp">
+      <Filter>03. Levels\Terrain_Tool\TerrainManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Cube.cpp">
+      <Filter>02.GameObject\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SpongeBob.cpp">
+      <Filter>02.GameObject\Character\Anim\SpongeBob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ring_Top.cpp">
+      <Filter>02.GameObject\LevelBoss1\Ring_Top</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Rope_Top.cpp">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ring_Pillar.cpp">
+      <Filter>02.GameObject\LevelBoss1\Ring_Pillar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Tube.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_Tube</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Pillar_Attachment.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar_Attachment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Pillar.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Cloth.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ground2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Groun2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ground.cpp">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Groun1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Pos_Light.cpp">
+      <Filter>02.GameObject\LevelBoss1\Pos_Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Stairs_02.cpp">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Stairs_04.cpp">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_04</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Poster.cpp">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Poster2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SM_PD_Banner_01.cpp">
+      <Filter>02.GameObject\LevelBoss1\SM_PD_Banner_01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SM_Light_Cone_02.cpp">
+      <Filter>02.GameObject\SM_Light_Cone_02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_A.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_A</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_B.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_B</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_C.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_D.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_E.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_E</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_G.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_G</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_H.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_H</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_I.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_I</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_J.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_J</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_K.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_K</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_L.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh\Fish_L</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard_Ropes.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard_Ropes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_UI.cpp">
+      <Filter>03. Levels\UI_Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Underpants.cpp">
+      <Filter>02.GameObject\UI\Underpants</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_HPBar.cpp">
+      <Filter>02.GameObject\UI\Boss_HPBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Animation.cpp">
+      <Filter>03. Levels\Animation_Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy.cpp">
+      <Filter>02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Body.cpp">
+      <Filter>02.GameObject\Character\Anim\Boss_Sandy\Boss_Sandy_Body</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MenuBar.cpp">
+      <Filter>02.GameObject\UI\MenuBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Disable_Exit.cpp">
+      <Filter>02.GameObject\UI\Exit_Label</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Disable_Geme_Start.cpp">
+      <Filter>02.GameObject\UI\GameStart_Label</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_HP_Energy.cpp">
+      <Filter>02.GameObject\UI\Boss_HP_Energy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Pink.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Blue.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Green.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Bubble.cpp">
+      <Filter>02.GameObject\Bubble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Patrick.cpp">
+      <Filter>02.GameObject\Character\Anim\Patrick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BossSandy_NonAnim.cpp">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\King_NonAnim.cpp">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SpongeBob_NonAnim.cpp">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Camera_DirectorMesh.cpp">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Patrick_NonAnim.cpp">
+      <Filter>02.GameObject\Character\NonAnim</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard_Broken.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Blue2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Yellow.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Field.cpp">
+      <Filter>02.GameObject\LevelField\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Taxi.cpp">
+      <Filter>02.GameObject\LevelField\Taxi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Gate.cpp">
+      <Filter>02.GameObject\LevelField\Gate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo.cpp">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo2.cpp">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo3.cpp">
+      <Filter>02.GameObject\LevelField\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Jelly_Pink.cpp">
+      <Filter>02.GameObject\LevelField\Jelly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Jelly_Blue.cpp">
+      <Filter>02.GameObject\LevelField\Jelly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GrassInstance.cpp">
+      <Filter>02.GameObject\LevelField\Grass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Squidward.cpp">
+      <Filter>02.GameObject\LevelField\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Man.cpp">
+      <Filter>02.GameObject\LevelField\Npc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Tree.cpp">
+      <Filter>02.GameObject\LevelField</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.ini">
+      <Filter>98. Default\Imgui</Filter>
+    </None>
+  </ItemGroup>
+</Project>
