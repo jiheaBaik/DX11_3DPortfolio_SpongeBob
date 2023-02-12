@@ -1,14 +1,327 @@
-﻿  Level_GamePlay.cpp
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(191): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(192): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(203): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(204): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(236): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(239): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(240): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
-d:\0923\spongebob\spongebob\client\private\level_gameplay.cpp(864): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-DirectXTKd.lib(pch.obj) : warning LNK4099: 'DirectXTK.pdb' PDB를 'DirectXTKd.lib(pch.obj)' 또는 'D:\0923\SpongeBob\SpongeBob\Client\Bin\DirectXTK.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-DirectXTKd.lib(ScreenGrab.obj) : warning LNK4099: 'DirectXTK.pdb' PDB를 'DirectXTKd.lib(ScreenGrab.obj)' 또는 'D:\0923\SpongeBob\SpongeBob\Client\Bin\DirectXTK.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-DirectXTKd.lib(WICTextureLoader.obj) : warning LNK4099: 'DirectXTK.pdb' PDB를 'DirectXTKd.lib(WICTextureLoader.obj)' 또는 'D:\0923\SpongeBob\SpongeBob\Client\Bin\DirectXTK.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-  Client.vcxproj -> D:\0923\SpongeBob\SpongeBob\Client\Bin\Client.exe
-  Client.vcxproj -> D:\0923\SpongeBob\SpongeBob\Client\Bin\Client.pdb (Full PDB)
+﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_Cell.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_Deferred.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_Point_Instance.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_Rect_Instance.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_VtxAnimModel.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_VtxModel.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_VtxNorTex.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Shader_VtxTex.cso
+  stdafx.cpp
+  BackGround.cpp
+  Big_Cloth.cpp
+  Big_Pillar.cpp
+  Big_Pillar_Attachment.cpp
+  BlackBackGround.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BlackBackGround.cpp(81,22): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BlackBackGround.cpp(93,22): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Boss_HPBar.cpp
+  Boss_HP_Energy.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_HP_Energy.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Boss_Sandy.cpp
+  Boss_Sandy_Body.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(61,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(62,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Body.cpp(672,86): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Body.cpp(698,37): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Body.cpp(703,87): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Body.cpp(720,42): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Body.cpp(1201,36): warning C4267: '=': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Boss_Sandy_Head.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_HP_Energy.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head.cpp(266,26): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head.cpp(267,17): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head.cpp(272,26): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head.cpp(273,17): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Boss_Sandy_Head2.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(61,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(62,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(70,10): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(71,11): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(136,15): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(175,11): warning C4101: 'm_vPos' :참조되지 않은 지역 변수입니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(489,9): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Boss_Sandy_Head2.cpp(490,10): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Boss_Sandy_Head_Glass.cpp
+  Boss_Sandy_Head_Glass2.cpp
+  Bubble.cpp
+  BubbleEffect.cpp
+  BubblePangEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BubblePangEffect.cpp(62,78): warning C4244: '인수': 'Engine::_int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BubblePangEffect.cpp(191,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BubbleUI.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BubbleUI.cpp(35,18): warning C4244: '=': 'int'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BubbleUI.cpp(38,24): warning C4244: '=': 'int'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\BubbleUI.cpp(41,23): warning C4244: '=': 'int'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Camera_Free.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(120,20): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(121,20): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(241,19): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(242,19): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(251,98): warning C4244: '인수': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(503,37): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(506,74): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(574,87): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(575,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(588,90): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(590,68): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(634,86): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(635,55): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(643,67): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(724,89): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Camera_Free.cpp(727,94): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  Cut.cpp
+  Disable_Exit.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Disable_Geme_Start.cpp
+  Effect_Point.cpp
+  Electric.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Electric.cpp(283,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  EndPangEffect_Point.cpp
+  Field.cpp
+  Fish.cpp
+  Fish_A.cpp
+  Fish_B.cpp
+  Fish_B2.cpp
+  Fish_C.cpp
+  Fish_D.cpp
+  Fish_E.cpp
+  Fish_G.cpp
+  Fish_H.cpp
+  Fish_I.cpp
+  Fish_J.cpp
+  Fish_K.cpp
+  Fish_L.cpp
+  Flame.cpp
+  Flower.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  FlowerEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(67,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(68,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\FlowerEffect.cpp(73,47): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  Flower_UI.cpp
+  Gate.cpp
+  GlowBlue.cpp
+  GlowBlue2.cpp
+  Ground.cpp
+  Ground2.cpp
+  InfoEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(67,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(68,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\InfoEffect.cpp(77,47): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  JellyCut.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\JellyCut.cpp(61,19): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  JellyGround.cpp
+  Jelly_Blue.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Blue.cpp(142,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Blue.cpp(149,54): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Blue.cpp(157,53): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Blue.cpp(164,57): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Blue.cpp(276,157): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+  Jelly_Pink.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Pink.cpp(268,158): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Pink.cpp(306,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Pink.cpp(314,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Pink.cpp(321,53): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Jelly_Pink.cpp(328,57): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  King_Neptune.cpp
+  Level_Field.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(132,48): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(315,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(324,61): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(335,63): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(342,64): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Field.cpp(357,58): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  Level_GamePlay.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(195,47): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(196,46): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(207,45): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(208,46): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(240,44): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(243,45): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(244,46): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_GamePlay.cpp(869,77): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Level_Loading.cpp
+  Level_Logo.cpp
+  Level_Menu.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\MenuBar.h(80,18): warning C4244: '초기화 중': 'float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Level_Menu.cpp(220,48): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  Light_Cone_Blue.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Blue.cpp(43,19): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Blue.cpp(49,20): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Light_Cone_Green.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Green.cpp(44,19): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Green.cpp(50,20): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Light_Cone_Pink.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Pink.cpp(45,19): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Light_Cone_Pink.cpp(51,20): warning C4305: '=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Light_Tube.cpp
+  Loader.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\MenuBar.h(80,18): warning C4244: '초기화 중': 'float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_HP_Energy.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(61,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(62,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(67,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\FlowerEffect.h(68,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(67,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\InfoEffect.h(68,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Logo.cpp
+  MainApp.cpp
+  Man.cpp
+  MenuBar.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\MenuBar.h(80,18): warning C4244: '초기화 중': 'float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\MenuBar.cpp(70,14): warning C4244: '초기화 중': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Menu_SpongeBob.cpp
+  MyMenu.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\MyMenu.cpp(43,52): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  PangEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\PangEffect.cpp(46,20): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\PangEffect.cpp(178,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Patrick_Player.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(61,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(62,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(64,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Boss_Sandy_Head2.h(65,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Patrick_Player.cpp(400,23): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Patrick_Player.cpp(869,27): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Patrick_Player.cpp(881,36): warning C4244: '-=': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(105,85): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(355,23): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(439,138): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(834,27): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(846,36): warning C4244: '-=': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Slame.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player_Slame.cpp(95,104): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  PoofEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\PoofEffect.cpp(42,20): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\PoofEffect.cpp(191,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Poster.cpp
+  Poster2.cpp
+  Pos_Light.cpp
+  RainBow.cpp
+  Ring_Pillar.cpp
+  Ring_Top.cpp
+  코드를 생성하고 있습니다...
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Player.cpp(804): warning C4715: 'Client::CPlayer::Set_Navigation': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  Robo.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo.cpp(195,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo.cpp(357,157): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+  Robo_2.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(175,55): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(183,55): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(190,52): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(197,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(364,157): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(305,9): warning C4101: 'm_floaGetY' :참조되지 않은 지역 변수입니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_2.cpp(306,10): warning C4101: 'look' :참조되지 않은 지역 변수입니다.
+  Robo_3.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(49,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(51,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Public\Flower.h(52,9): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_3.cpp(172,55): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_3.cpp(179,53): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_3.cpp(187,52): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_3.cpp(194,56): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Robo_3.cpp(355,157): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+  Rope_Top.cpp
+  Rope_Top_Broken.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Rope_Top_Broken.cpp(29,70): warning C4305: '인수': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Rope_Top_Broken.cpp(30,89): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  Sky.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Sky.cpp(92,61): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  SmokeEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SmokeEffect.cpp(71,20): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SmokeEffect.cpp(211,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Sandy_Slame.cpp
+  Scoreboard.cpp
+  Scoreboard_Broken.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Scoreboard_Broken.cpp(90,25): warning C4305: '초기화 중': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Scoreboard_Ropes.cpp
+  SkyBox_Poeisdom.cpp
+  SmokeEffect2.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SmokeEffect2.cpp(74,20): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SmokeEffect2.cpp(213,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SM_PD_Banner_01.cpp
+  SnadySmokeEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SnadySmokeEffect.cpp(80,92): warning C4244: '인수': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\SnadySmokeEffect.cpp(198,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SpongeBob.cpp
+  SpongeBob_Foot_L.cpp
+  SpongeBob_Wand.cpp
+  Squidward.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Squidward.cpp(88,40): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Stairs_02.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Stairs_04.cpp
+  Taxi.cpp
+  TaxiStop.cpp
+  Terrain.cpp
+  Tree.cpp
+  TwinkleEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\TwinkleEffect.cpp(40,17): warning C4244: '+=': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\TwinkleEffect.cpp(160,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  UnderPangEffect.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\UnderPangEffect.cpp(200,6): warning C4244: '인수': 'Engine::_float'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Underpants.cpp
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Underpants.cpp(64,15): warning C4305: '+=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+D:\Task\DX11_3DPortfolio_SpongeBob\Client\Private\Underpants.cpp(70,14): warning C4305: '-=': 'double'에서 'Engine::_float'(으)로 잘립니다.
+  Client.cpp
+  코드를 생성하고 있습니다...
+DirectXTKd.lib(ScreenGrab.obj) : warning LNK4099: '' PDB를 'DirectXTKd.lib(ScreenGrab.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTKd.lib(WICTextureLoader.obj) : warning LNK4099: '' PDB를 'DirectXTKd.lib(WICTextureLoader.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+DirectXTKd.lib(pch.obj) : warning LNK4099: '' PDB를 'DirectXTKd.lib(pch.obj)' 또는 ''에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  Client.vcxproj -> D:\Task\DX11_3DPortfolio_SpongeBob\Client\Bin\Client.exe

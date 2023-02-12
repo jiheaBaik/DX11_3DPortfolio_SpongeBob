@@ -36,7 +36,7 @@
 #include <map>
 #include <unordered_map>
 #include <algorithm>
-#include <typeinfo.h>
+#include <typeinfo>
 using namespace std;
 
 using namespace DirectX;
