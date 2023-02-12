@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="98.Default">
+      <UniqueIdentifier>{c6a15d80-7bef-4c3c-880c-6bb839a1fa5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainApp">
+      <UniqueIdentifier>{b6117cc5-dd4b-4eff-a287-3508e9f129b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels">
+      <UniqueIdentifier>{dc15e265-abab-4ba0-9424-8145499e92b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\Loading">
+      <UniqueIdentifier>{cfaae44d-954c-42b3-86c3-b6c92a04cff6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\Logo">
+      <UniqueIdentifier>{0c968da0-7b3c-4c1d-961b-d23c844fd942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\GamePlay">
+      <UniqueIdentifier>{0a602ef1-700e-496e-ba4e-fc044fcb7c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\Loading\Loader">
+      <UniqueIdentifier>{fe011e95-6a77-460a-86c9-8dcf06ea458e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject">
+      <UniqueIdentifier>{81ebd98e-c7bf-47db-a34e-8d84baef48b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\BackGround">
+      <UniqueIdentifier>{53b9d7e0-7b8b-4f23-b8f8-727d72978c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ShaderFiles">
+      <UniqueIdentifier>{39828825-6a49-4d30-9d11-3abd0a1cb5ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Camera">
+      <UniqueIdentifier>{d5e49118-c778-4fb3-922b-28bbad0524ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Terrain">
+      <UniqueIdentifier>{de1d6b84-7e2f-4b5b-8010-9828fc403afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Player">
+      <UniqueIdentifier>{0143196c-9164-4246-9ac6-bd2905c275ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1">
+      <UniqueIdentifier>{8b0b77b8-a630-4d02-9178-5c35c1354ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Ring_Pillar">
+      <UniqueIdentifier>{d06fa7ba-da21-4022-8f19-b5fb83719bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Rope_Top">
+      <UniqueIdentifier>{db7b5383-82ea-40ea-abc9-81643b11f99f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Ring_Top">
+      <UniqueIdentifier>{fa9c1bac-be29-4e8f-bacf-5e9eb829da98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Light_Tube">
+      <UniqueIdentifier>{beccd130-6356-45d3-ac4c-353907bda5c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Pillar">
+      <UniqueIdentifier>{5109eae1-bc99-4c47-9b54-9f9795a5ae8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Pillar_Attachment">
+      <UniqueIdentifier>{f80170ce-edc5-4c8d-9e64-3e59acf1e273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Big_Cloth">
+      <UniqueIdentifier>{de4fa45c-2faa-4b3e-8b01-84b1edcc381e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\SpongeBob">
+      <UniqueIdentifier>{4c892c9c-baca-4f1a-b914-6b399c1d749c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds">
+      <UniqueIdentifier>{6938ffd2-5d20-4e67-b38b-92a1fb31bf9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds\Ground1">
+      <UniqueIdentifier>{7c8bea7c-752a-466f-99cb-eb5b42078a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Grounds\Ground2">
+      <UniqueIdentifier>{85bc832f-ba78-432d-a9c7-5010bb8598a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\FIsh">
+      <UniqueIdentifier>{27a0acd5-e2a6-4350-aa37-f48c91847541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Scoreboard_Ropes">
+      <UniqueIdentifier>{5bb332af-ace3-435b-9821-553969c51d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI">
+      <UniqueIdentifier>{188e589b-0201-45b7-9977-c5e18746b0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Boss_HPBar">
+      <UniqueIdentifier>{280eb1df-8b62-4a38-9af8-a56ef3bda893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Underpants">
+      <UniqueIdentifier>{0fb21a32-61f0-4881-89aa-4aa36f8515ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs">
+      <UniqueIdentifier>{07ee90ab-53c0-46fb-9eb2-aed944760785}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs\Stairs_02">
+      <UniqueIdentifier>{67c1eb55-748b-4242-910a-9f760cb7c653}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Stairs\Stairs_04">
+      <UniqueIdentifier>{fda7191c-9262-4bcb-8f84-da2f8acb0457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy">
+      <UniqueIdentifier>{4a6abd8b-cb1b-41ab-bb70-dbc462009747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\King_Neptune">
+      <UniqueIdentifier>{3bd2298d-2023-4f89-ba77-544a4326fcb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head">
+      <UniqueIdentifier>{089b0592-7216-4122-b607-1c94f2921688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Body">
+      <UniqueIdentifier>{7fb0ee08-6553-4426-bd80-444d6bb049f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Levels\Menu">
+      <UniqueIdentifier>{ffe80d30-7e91-4cc4-998a-af4aae870f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\BackGround\Logo">
+      <UniqueIdentifier>{219233dc-3961-4760-a1b8-4bfc099a391e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\BackGround\Loading">
+      <UniqueIdentifier>{3223915e-895d-4171-a822-5179ef67c375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Menu">
+      <UniqueIdentifier>{d641ed85-850d-4f7a-ae03-97d5df49f4be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Menu\BackGround">
+      <UniqueIdentifier>{fc7b1ebe-45f7-4d3d-ae2b-11fc7b0fbad9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Menu\MenuBar">
+      <UniqueIdentifier>{50c2d850-e672-4241-8292-06bfc71cf276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Menu_SpongeBob">
+      <UniqueIdentifier>{687f1b7b-d337-4028-bd87-a09d180ee302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Player\SpongeBob_Foot_L">
+      <UniqueIdentifier>{9aa863fa-ed8d-4217-91a8-9dad16a65b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Player\SpongeBob_Wand">
+      <UniqueIdentifier>{869e093b-c63c-4594-94ea-0a7833e5e24b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\SkyBox">
+      <UniqueIdentifier>{14ef0e49-9c1f-43d9-aa75-686ab7cb6fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy\Snady_Slame">
+      <UniqueIdentifier>{b495ffd3-3150-4929-b232-cad2fca34f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Boss_HP_Energy">
+      <UniqueIdentifier>{f524360a-7f24-495f-8403-b4d04d42bcf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Player\Player_Slame">
+      <UniqueIdentifier>{6b50df2b-a5c9-4cfd-9053-4f7fb5d2cdbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Light_cone">
+      <UniqueIdentifier>{13c477f0-5f1a-438f-86fc-f9042ed0285e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Bubble">
+      <UniqueIdentifier>{fd8a5b04-be09-4d74-8f99-f7016ea26acb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\SpongeBob\SM_PD_Banner_01">
+      <UniqueIdentifier>{82fcec7b-bb4e-4cf9-ba34-3d3e76bcb2ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Scoreboard">
+      <UniqueIdentifier>{afb8d50a-1f6e-4e3c-a114-dceb97308e48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Fish">
+      <UniqueIdentifier>{4daff4fa-a611-4f89-9dab-85db147a8036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Effect">
+      <UniqueIdentifier>{25c40ddc-5bc5-4eb6-a5ca-82b04a968fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Effect\InstaceEffect">
+      <UniqueIdentifier>{55903f7a-5411-49d4-ada1-c5d46d3c4273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Ring_Top\99.Defines">
+      <UniqueIdentifier>{74de7bb4-a752-40c6-aa2d-61a989eaa40c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster">
+      <UniqueIdentifier>{533a5ef7-ec3f-45cb-ad79-d7ed4e0f5818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster\Poster1">
+      <UniqueIdentifier>{62408f42-e2d7-42a2-8a5d-cfe9601c5a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster\Poster2">
+      <UniqueIdentifier>{3e9b0bb4-688b-4d5c-9d03-bd5d4c704f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Poster\Pos_Light">
+      <UniqueIdentifier>{563303ec-ca3e-41a0-afaf-465db66e4af3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\LevelBoss1\Boss_Sandy\SandyFlame">
+      <UniqueIdentifier>{dead01eb-6870-4cb3-adaf-f6f6d3871496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Effect\Rect_Using">
+      <UniqueIdentifier>{1b8068a7-4574-40dd-914a-5d884d1e27ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\BlackBackGround">
+      <UniqueIdentifier>{ccfa5392-9da3-4a4f-876e-bc57c738c8c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field">
+      <UniqueIdentifier>{c3439da3-ef6e-4b7c-a43f-70c7243e8a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Jelly">
+      <UniqueIdentifier>{6c583786-8672-404d-879a-19305dd8f6a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Flower">
+      <UniqueIdentifier>{a5dd0d68-193a-4374-b90a-6cb1a090c9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Robo">
+      <UniqueIdentifier>{51c3b9ae-0977-4142-acbd-eb32b9bf0fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Map">
+      <UniqueIdentifier>{0f46ab4d-4c0c-4e78-b670-b8949184e45b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Taxi">
+      <UniqueIdentifier>{c0b65ebf-cc2f-44bb-8cdd-c6479ea5bd03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Flower">
+      <UniqueIdentifier>{f32fff4e-e178-42c5-a9b9-421a28097d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\TaxiStop">
+      <UniqueIdentifier>{5ab083fb-3b7a-425f-9f06-187a7b58a35e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Level_Field\Gate">
+      <UniqueIdentifier>{19e56c65-663f-4299-b15b-51d2b8d19d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\UI\Cut">
+      <UniqueIdentifier>{f5488ebd-d08f-40f7-9730-06b4eafba999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\Player\RainBow">
+      <UniqueIdentifier>{33d505bc-fe1b-4aed-8d12-28673cd50c9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Client.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>98.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Client_Defines.h">
+      <Filter>02.GameObject\LevelBoss1\Ring_Top\99.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MainApp.h">
+      <Filter>00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_GamePlay.h">
+      <Filter>01.Levels\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Loader.h">
+      <Filter>01.Levels\Loading\Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Loading.h">
+      <Filter>01.Levels\Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Logo.h">
+      <Filter>01.Levels\Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Camera_Free.h">
+      <Filter>02.GameObject\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Terrain.h">
+      <Filter>02.GameObject\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Player.h">
+      <Filter>02.GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ring_Top.h">
+      <Filter>02.GameObject\LevelBoss1\Ring_Top</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SpongeBob.h">
+      <Filter>02.GameObject\LevelBoss1\SpongeBob</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ring_Pillar.h">
+      <Filter>02.GameObject\LevelBoss1\Ring_Pillar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Rope_Top.h">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Tube.h">
+      <Filter>02.GameObject\LevelBoss1\Light_Tube</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Scoreboard.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Pillar.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Pillar_Attachment.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar_Attachment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\King_Neptune.h">
+      <Filter>02.GameObject\LevelBoss1\King_Neptune</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Big_Cloth.h">
+      <Filter>02.GameObject\LevelBoss1\Big_Cloth</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ground.h">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Ground1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Ground2.h">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Ground2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Pos_Light.h">
+      <Filter>02.GameObject\LevelBoss1\Poster\Pos_Light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Stairs_02.h">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_02</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Stairs_04.h">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_04</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SM_PD_Banner_01.h">
+      <Filter>02.GameObject\LevelBoss1\SpongeBob\SM_PD_Banner_01</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Poster.h">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Poster2.h">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_A.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_B.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_C.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_D.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_E.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_G.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_H.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_I.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_J.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_K.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_L.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Scoreboard_Ropes.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard_Ropes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_HPBar.h">
+      <Filter>02.GameObject\UI\Boss_HPBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Underpants.h">
+      <Filter>02.GameObject\UI\Underpants</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Body.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Body</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Head.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Menu.h">
+      <Filter>01.Levels\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BackGround.h">
+      <Filter>02.GameObject\BackGround\Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Logo.h">
+      <Filter>02.GameObject\BackGround\Loading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MyMenu.h">
+      <Filter>02.GameObject\UI\Menu\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Disable_Exit.h">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Disable_Geme_Start.h">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\MenuBar.h">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Menu_SpongeBob.h">
+      <Filter>02.GameObject\Menu_SpongeBob</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SpongeBob_Foot_L.h">
+      <Filter>02.GameObject\Player\SpongeBob_Foot_L</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Reference\ShaderFiles\Shader_Defines.hpp">
+      <Filter>97.ShaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SkyBox_Poeisdom.h">
+      <Filter>02.GameObject\LevelBoss1\SkyBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Sandy_Slame.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Snady_Slame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SpongeBob_Wand.h">
+      <Filter>02.GameObject\Player\SpongeBob_Wand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_HP_Energy.h">
+      <Filter>02.GameObject\UI\Boss_HP_Energy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Player_Slame.h">
+      <Filter>02.GameObject\Player\Player_Slame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Blue.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Green.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Light_Cone_Pink.h">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Bubble.h">
+      <Filter>02.GameObject\Bubble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Patrick_Player.h">
+      <Filter>02.GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Reference\Headers\Player_Typedef.h">
+      <Filter>02.GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Rope_Top_Broekn.h">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Scoreboard_Broken.h">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Head_Glass2.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Head2.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Boss_Sandy_Head_Glass.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish_B2.h">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Fish.h">
+      <Filter>02.GameObject\UI\Fish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Effect_Point.h">
+      <Filter>02.GameObject\Effect\InstaceEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Flame.h">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\SandyFlame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BubblePangEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Electric.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GlowBlue.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\GlowBlue2.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\PangEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SmokeEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SmokeEffect2.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\SnadySmokeEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\EndPangEffect_Point.h">
+      <Filter>02.GameObject\Effect\InstaceEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BlackBackGround.h">
+      <Filter>02.GameObject\UI\BlackBackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Level_Field.h">
+      <Filter>01.Levels\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Jelly_Pink.h">
+      <Filter>02.GameObject\Level_Field\Jelly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Jelly_Blue.h">
+      <Filter>02.GameObject\Level_Field\Jelly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\FlowerEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Flower.h">
+      <Filter>02.GameObject\Level_Field\Flower</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BubbleEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo.h">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo_2.h">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Robo_3.h">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Field.h">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\JellyGround.h">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Taxi.h">
+      <Filter>02.GameObject\Level_Field\Taxi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Flower_UI.h">
+      <Filter>02.GameObject\UI\Flower</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Sky.h">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\TaxiStop.h">
+      <Filter>02.GameObject\Level_Field\TaxiStop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Gate.h">
+      <Filter>02.GameObject\Level_Field\Gate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\PoofEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\TwinkleEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Squidward.h">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Man.h">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Tree.h">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Cut.h">
+      <Filter>02.GameObject\UI\Cut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\JellyCut.h">
+      <Filter>02.GameObject\UI\Cut</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\BubbleUI.h">
+      <Filter>02.GameObject\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\RainBow.h">
+      <Filter>02.GameObject\Player\RainBow</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\InfoEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\UnderPangEffect.h">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Client.cpp">
+      <Filter>98.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>98.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MainApp.cpp">
+      <Filter>00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_GamePlay.cpp">
+      <Filter>01.Levels\GamePlay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Loading.cpp">
+      <Filter>01.Levels\Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Loader.cpp">
+      <Filter>01.Levels\Loading\Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Logo.cpp">
+      <Filter>01.Levels\Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Camera_Free.cpp">
+      <Filter>02.GameObject\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Terrain.cpp">
+      <Filter>02.GameObject\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Player.cpp">
+      <Filter>02.GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ring_Top.cpp">
+      <Filter>02.GameObject\LevelBoss1\Ring_Top</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SpongeBob.cpp">
+      <Filter>02.GameObject\LevelBoss1\SpongeBob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ring_Pillar.cpp">
+      <Filter>02.GameObject\LevelBoss1\Ring_Pillar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Rope_Top.cpp">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Tube.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_Tube</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Pillar.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Pillar_Attachment.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Pillar_Attachment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\King_Neptune.cpp">
+      <Filter>02.GameObject\LevelBoss1\King_Neptune</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Big_Cloth.cpp">
+      <Filter>02.GameObject\LevelBoss1\Big_Cloth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ground.cpp">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Ground1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Ground2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Grounds\Ground2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Pos_Light.cpp">
+      <Filter>02.GameObject\LevelBoss1\Poster\Pos_Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Stairs_02.cpp">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_02</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Stairs_04.cpp">
+      <Filter>02.GameObject\LevelBoss1\Stairs\Stairs_04</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SM_PD_Banner_01.cpp">
+      <Filter>02.GameObject\LevelBoss1\SpongeBob\SM_PD_Banner_01</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Poster.cpp">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Poster2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Poster\Poster2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_A.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_B.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_C.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_D.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_E.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_G.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_H.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_I.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_J.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_K.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_L.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard_Ropes.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard_Ropes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_HPBar.cpp">
+      <Filter>02.GameObject\UI\Boss_HPBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Underpants.cpp">
+      <Filter>02.GameObject\UI\Underpants</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Body.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Body</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Head.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Menu.cpp">
+      <Filter>01.Levels\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BackGround.cpp">
+      <Filter>02.GameObject\BackGround\Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Logo.cpp">
+      <Filter>02.GameObject\BackGround\Loading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MyMenu.cpp">
+      <Filter>02.GameObject\UI\Menu\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Disable_Exit.cpp">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Disable_Geme_Start.cpp">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\MenuBar.cpp">
+      <Filter>02.GameObject\UI\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Menu_SpongeBob.cpp">
+      <Filter>02.GameObject\Menu_SpongeBob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SpongeBob_Foot_L.cpp">
+      <Filter>02.GameObject\Player\SpongeBob_Foot_L</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SkyBox_Poeisdom.cpp">
+      <Filter>02.GameObject\LevelBoss1\SkyBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Sandy_Slame.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Snady_Slame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SpongeBob_Wand.cpp">
+      <Filter>02.GameObject\Player\SpongeBob_Wand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_HP_Energy.cpp">
+      <Filter>02.GameObject\UI\Boss_HP_Energy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Player_Slame.cpp">
+      <Filter>02.GameObject\Player\Player_Slame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Blue.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Green.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Light_Cone_Pink.cpp">
+      <Filter>02.GameObject\LevelBoss1\Light_cone</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Bubble.cpp">
+      <Filter>02.GameObject\Bubble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Patrick_Player.cpp">
+      <Filter>02.GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Rope_Top_Broken.cpp">
+      <Filter>02.GameObject\LevelBoss1\Rope_Top</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Scoreboard_Broken.cpp">
+      <Filter>02.GameObject\LevelBoss1\Scoreboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Head_Glass2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Head2.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Boss_Sandy_Head_Glass.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\Boss_Sandy_Head</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish_B2.cpp">
+      <Filter>02.GameObject\LevelBoss1\FIsh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Fish.cpp">
+      <Filter>02.GameObject\UI\Fish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Effect_Point.cpp">
+      <Filter>02.GameObject\Effect\InstaceEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Flame.cpp">
+      <Filter>02.GameObject\LevelBoss1\Boss_Sandy\SandyFlame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BubblePangEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Electric.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GlowBlue.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\GlowBlue2.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\PangEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SmokeEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SmokeEffect2.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\SnadySmokeEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\EndPangEffect_Point.cpp">
+      <Filter>02.GameObject\Effect\InstaceEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BlackBackGround.cpp">
+      <Filter>02.GameObject\UI\BlackBackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Level_Field.cpp">
+      <Filter>01.Levels\GamePlay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Jelly_Pink.cpp">
+      <Filter>02.GameObject\Level_Field\Jelly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Jelly_Blue.cpp">
+      <Filter>02.GameObject\Level_Field\Jelly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\FlowerEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Flower.cpp">
+      <Filter>02.GameObject\Level_Field\Flower</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BubbleEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo.cpp">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo_2.cpp">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Robo_3.cpp">
+      <Filter>02.GameObject\Level_Field\Robo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Field.cpp">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\JellyGround.cpp">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Taxi.cpp">
+      <Filter>02.GameObject\Level_Field\Taxi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Flower_UI.cpp">
+      <Filter>02.GameObject\UI\Flower</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Sky.cpp">
+      <Filter>02.GameObject\Level_Field\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\TaxiStop.cpp">
+      <Filter>02.GameObject\Level_Field\TaxiStop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Gate.cpp">
+      <Filter>02.GameObject\Level_Field\Gate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\PoofEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\TwinkleEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Squidward.cpp">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Man.cpp">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Tree.cpp">
+      <Filter>02.GameObject\Level_Field</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Cut.cpp">
+      <Filter>02.GameObject\UI\Cut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\JellyCut.cpp">
+      <Filter>02.GameObject\UI\Cut</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\BubbleUI.cpp">
+      <Filter>02.GameObject\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\RainBow.cpp">
+      <Filter>02.GameObject\Player\RainBow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\InfoEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\UnderPangEffect.cpp">
+      <Filter>02.GameObject\Effect\Rect_Using</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>98.Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc">
+      <Filter>98.Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxAnimModel.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxModel.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxNorTex.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxTex.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Cell.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Deferred.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Point_Instance.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Rect_Instance.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

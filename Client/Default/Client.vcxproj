@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F64D14CE-318E-4A55-B8BA-57339E22590C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Client</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Client\Bin\</OutDir>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(DXSDK_DIR)lib\x64;..\..\Reference\Librarys;%(AdditionalLibraryDirectories)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include;..\..\Reference\Headers;..\Public;..\..\Fmod</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Client\Bin\</OutDir>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(DXSDK_DIR)lib\x64;..\..\Reference\Librarys;%(AdditionalLibraryDirectories)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include;..\..\Reference\Headers;..\Public;..\..\Fmod</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Client\Bin\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include;..\..\Reference\Headers;..\Public;..\..\Fmod</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(DXSDK_DIR)lib\x64;..\..\Reference\Librarys;%(AdditionalLibraryDirectories)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Client\Bin\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DXSDK_DIR)Include;..\..\Reference\Headers;..\Public;..\..\Fmod</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(DXSDK_DIR)lib\x64;..\..\Reference\Librarys;%(AdditionalLibraryDirectories)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;dinput8.lib;D3DCompiler.lib;DirectXTKd.lib;Effects11d.lib;fmod_vc.lib;fmodL_vc.lib;assimp-vc140-mtd.lib;Engine.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;dinput8.lib;D3DCompiler.lib;DirectXTKd.lib;Effects11d.lib;fmod_vc.lib;fmodL_vc.lib;assimp-vc140-mtd.lib;Engine.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;dinput8.lib;D3DCompiler.lib;DirectXTK.lib;Effects11.lib;fmod_vc.lib;fmodL_vc.lib;assimp-vc140-mt.lib;Engine.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxguid.lib;dinput8.lib;D3DCompiler.lib;DirectXTK.lib;Effects11.lib;fmod_vc.lib;fmodL_vc.lib;assimp-vc140-mt.lib;Engine.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Reference\Headers\Player_Typedef.h" />
+    <ClInclude Include="..\..\Reference\ShaderFiles\Shader_Defines.hpp" />
+    <ClInclude Include="..\Public\BackGround.h" />
+    <ClInclude Include="..\Public\Big_Cloth.h" />
+    <ClInclude Include="..\Public\Big_Pillar.h" />
+    <ClInclude Include="..\Public\Big_Pillar_Attachment.h" />
+    <ClInclude Include="..\Public\BlackBackGround.h" />
+    <ClInclude Include="..\Public\Boss_HPBar.h" />
+    <ClInclude Include="..\Public\Boss_HP_Energy.h" />
+    <ClInclude Include="..\Public\Boss_Sandy.h" />
+    <ClInclude Include="..\Public\Boss_Sandy_Body.h" />
+    <ClInclude Include="..\Public\Boss_Sandy_Head.h" />
+    <ClInclude Include="..\Public\Boss_Sandy_Head2.h" />
+    <ClInclude Include="..\Public\Boss_Sandy_Head_Glass.h" />
+    <ClInclude Include="..\Public\Boss_Sandy_Head_Glass2.h" />
+    <ClInclude Include="..\Public\Bubble.h" />
+    <ClInclude Include="..\Public\BubbleEffect.h" />
+    <ClInclude Include="..\Public\BubblePangEffect.h" />
+    <ClInclude Include="..\Public\BubbleUI.h" />
+    <ClInclude Include="..\Public\Camera_Free.h" />
+    <ClInclude Include="..\Public\Client_Defines.h" />
+    <ClInclude Include="..\Public\Cut.h" />
+    <ClInclude Include="..\Public\Disable_Exit.h" />
+    <ClInclude Include="..\Public\Disable_Geme_Start.h" />
+    <ClInclude Include="..\Public\Effect_Point.h" />
+    <ClInclude Include="..\Public\Electric.h" />
+    <ClInclude Include="..\Public\EndPangEffect_Point.h" />
+    <ClInclude Include="..\Public\Field.h" />
+    <ClInclude Include="..\Public\Fish.h" />
+    <ClInclude Include="..\Public\Fish_A.h" />
+    <ClInclude Include="..\Public\Fish_B.h" />
+    <ClInclude Include="..\Public\Fish_B2.h" />
+    <ClInclude Include="..\Public\Fish_C.h" />
+    <ClInclude Include="..\Public\Fish_D.h" />
+    <ClInclude Include="..\Public\Fish_E.h" />
+    <ClInclude Include="..\Public\Fish_G.h" />
+    <ClInclude Include="..\Public\Fish_H.h" />
+    <ClInclude Include="..\Public\Fish_I.h" />
+    <ClInclude Include="..\Public\Fish_J.h" />
+    <ClInclude Include="..\Public\Fish_K.h" />
+    <ClInclude Include="..\Public\Fish_L.h" />
+    <ClInclude Include="..\Public\Flame.h" />
+    <ClInclude Include="..\Public\Flower.h" />
+    <ClInclude Include="..\Public\FlowerEffect.h" />
+    <ClInclude Include="..\Public\Flower_UI.h" />
+    <ClInclude Include="..\Public\Gate.h" />
+    <ClInclude Include="..\Public\GlowBlue.h" />
+    <ClInclude Include="..\Public\GlowBlue2.h" />
+    <ClInclude Include="..\Public\Ground.h" />
+    <ClInclude Include="..\Public\Ground2.h" />
+    <ClInclude Include="..\Public\InfoEffect.h" />
+    <ClInclude Include="..\Public\JellyCut.h" />
+    <ClInclude Include="..\Public\JellyGround.h" />
+    <ClInclude Include="..\Public\Jelly_Blue.h" />
+    <ClInclude Include="..\Public\Jelly_Pink.h" />
+    <ClInclude Include="..\public\King_Neptune.h" />
+    <ClInclude Include="..\Public\Level_Field.h" />
+    <ClInclude Include="..\Public\Level_GamePlay.h" />
+    <ClInclude Include="..\Public\Level_Loading.h" />
+    <ClInclude Include="..\Public\Level_Logo.h" />
+    <ClInclude Include="..\Public\Level_Menu.h" />
+    <ClInclude Include="..\Public\Light_Cone_Blue.h" />
+    <ClInclude Include="..\Public\Light_Cone_Green.h" />
+    <ClInclude Include="..\Public\Light_Cone_Pink.h" />
+    <ClInclude Include="..\Public\Light_Tube.h" />
+    <ClInclude Include="..\Public\Loader.h" />
+    <ClInclude Include="..\Public\Logo.h" />
+    <ClInclude Include="..\Public\MainApp.h" />
+    <ClInclude Include="..\Public\Man.h" />
+    <ClInclude Include="..\Public\MenuBar.h" />
+    <ClInclude Include="..\Public\Menu_SpongeBob.h" />
+    <ClInclude Include="..\Public\MyMenu.h" />
+    <ClInclude Include="..\Public\PangEffect.h" />
+    <ClInclude Include="..\Public\Patrick_Player.h" />
+    <ClInclude Include="..\Public\Player.h" />
+    <ClInclude Include="..\Public\Player_Slame.h" />
+    <ClInclude Include="..\Public\PoofEffect.h" />
+    <ClInclude Include="..\Public\Poster.h" />
+    <ClInclude Include="..\Public\Poster2.h" />
+    <ClInclude Include="..\Public\Pos_Light.h" />
+    <ClInclude Include="..\Public\RainBow.h" />
+    <ClInclude Include="..\Public\Ring_Pillar.h" />
+    <ClInclude Include="..\Public\Ring_Top.h" />
+    <ClInclude Include="..\Public\Robo.h" />
+    <ClInclude Include="..\Public\Robo_2.h" />
+    <ClInclude Include="..\Public\Robo_3.h" />
+    <ClInclude Include="..\Public\Rope_Top.h" />
+    <ClInclude Include="..\Public\Rope_Top_Broekn.h" />
+    <ClInclude Include="..\Public\Sky.h" />
+    <ClInclude Include="..\Public\SmokeEffect.h" />
+    <ClInclude Include="..\Public\Sandy_Slame.h" />
+    <ClInclude Include="..\Public\Scoreboard.h" />
+    <ClInclude Include="..\Public\Scoreboard_Broken.h" />
+    <ClInclude Include="..\Public\Scoreboard_Ropes.h" />
+    <ClInclude Include="..\Public\SkyBox_Poeisdom.h" />
+    <ClInclude Include="..\Public\SmokeEffect2.h" />
+    <ClInclude Include="..\Public\SM_PD_Banner_01.h" />
+    <ClInclude Include="..\Public\SnadySmokeEffect.h" />
+    <ClInclude Include="..\Public\SpongeBob.h" />
+    <ClInclude Include="..\Public\SpongeBob_Foot_L.h" />
+    <ClInclude Include="..\Public\SpongeBob_Wand.h" />
+    <ClInclude Include="..\Public\Squidward.h" />
+    <ClInclude Include="..\Public\Stairs_02.h" />
+    <ClInclude Include="..\Public\Stairs_04.h" />
+    <ClInclude Include="..\Public\Taxi.h" />
+    <ClInclude Include="..\Public\TaxiStop.h" />
+    <ClInclude Include="..\Public\Terrain.h" />
+    <ClInclude Include="..\Public\Tree.h" />
+    <ClInclude Include="..\Public\TwinkleEffect.h" />
+    <ClInclude Include="..\Public\UnderPangEffect.h" />
+    <ClInclude Include="..\Public\Underpants.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Private\BackGround.cpp" />
+    <ClCompile Include="..\Private\Big_Cloth.cpp" />
+    <ClCompile Include="..\Private\Big_Pillar.cpp" />
+    <ClCompile Include="..\Private\Big_Pillar_Attachment.cpp" />
+    <ClCompile Include="..\Private\BlackBackGround.cpp" />
+    <ClCompile Include="..\Private\Boss_HPBar.cpp" />
+    <ClCompile Include="..\Private\Boss_HP_Energy.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy_Body.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy_Head.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy_Head2.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy_Head_Glass.cpp" />
+    <ClCompile Include="..\Private\Boss_Sandy_Head_Glass2.cpp" />
+    <ClCompile Include="..\Private\Bubble.cpp" />
+    <ClCompile Include="..\Private\BubbleEffect.cpp" />
+    <ClCompile Include="..\Private\BubblePangEffect.cpp" />
+    <ClCompile Include="..\Private\BubbleUI.cpp" />
+    <ClCompile Include="..\Private\Camera_Free.cpp" />
+    <ClCompile Include="..\Private\Cut.cpp" />
+    <ClCompile Include="..\Private\Disable_Exit.cpp" />
+    <ClCompile Include="..\Private\Disable_Geme_Start.cpp" />
+    <ClCompile Include="..\Private\Effect_Point.cpp" />
+    <ClCompile Include="..\Private\Electric.cpp" />
+    <ClCompile Include="..\Private\EndPangEffect_Point.cpp" />
+    <ClCompile Include="..\Private\Field.cpp" />
+    <ClCompile Include="..\Private\Fish.cpp" />
+    <ClCompile Include="..\Private\Fish_A.cpp" />
+    <ClCompile Include="..\Private\Fish_B.cpp" />
+    <ClCompile Include="..\Private\Fish_B2.cpp" />
+    <ClCompile Include="..\Private\Fish_C.cpp" />
+    <ClCompile Include="..\Private\Fish_D.cpp" />
+    <ClCompile Include="..\Private\Fish_E.cpp" />
+    <ClCompile Include="..\Private\Fish_G.cpp" />
+    <ClCompile Include="..\Private\Fish_H.cpp" />
+    <ClCompile Include="..\Private\Fish_I.cpp" />
+    <ClCompile Include="..\Private\Fish_J.cpp" />
+    <ClCompile Include="..\Private\Fish_K.cpp" />
+    <ClCompile Include="..\Private\Fish_L.cpp" />
+    <ClCompile Include="..\Private\Flame.cpp" />
+    <ClCompile Include="..\Private\Flower.cpp" />
+    <ClCompile Include="..\Private\FlowerEffect.cpp" />
+    <ClCompile Include="..\Private\Flower_UI.cpp" />
+    <ClCompile Include="..\Private\Gate.cpp" />
+    <ClCompile Include="..\Private\GlowBlue.cpp" />
+    <ClCompile Include="..\Private\GlowBlue2.cpp" />
+    <ClCompile Include="..\Private\Ground.cpp" />
+    <ClCompile Include="..\Private\Ground2.cpp" />
+    <ClCompile Include="..\Private\InfoEffect.cpp" />
+    <ClCompile Include="..\Private\JellyCut.cpp" />
+    <ClCompile Include="..\Private\JellyGround.cpp" />
+    <ClCompile Include="..\Private\Jelly_Blue.cpp" />
+    <ClCompile Include="..\Private\Jelly_Pink.cpp" />
+    <ClCompile Include="..\Private\King_Neptune.cpp" />
+    <ClCompile Include="..\Private\Level_Field.cpp" />
+    <ClCompile Include="..\Private\Level_GamePlay.cpp" />
+    <ClCompile Include="..\Private\Level_Loading.cpp" />
+    <ClCompile Include="..\Private\Level_Logo.cpp" />
+    <ClCompile Include="..\Private\Level_Menu.cpp" />
+    <ClCompile Include="..\Private\Light_Cone_Blue.cpp" />
+    <ClCompile Include="..\Private\Light_Cone_Green.cpp" />
+    <ClCompile Include="..\Private\Light_Cone_Pink.cpp" />
+    <ClCompile Include="..\Private\Light_Tube.cpp" />
+    <ClCompile Include="..\Private\Loader.cpp" />
+    <ClCompile Include="..\Private\Logo.cpp" />
+    <ClCompile Include="..\Private\MainApp.cpp" />
+    <ClCompile Include="..\Private\Man.cpp" />
+    <ClCompile Include="..\Private\MenuBar.cpp" />
+    <ClCompile Include="..\Private\Menu_SpongeBob.cpp" />
+    <ClCompile Include="..\Private\MyMenu.cpp" />
+    <ClCompile Include="..\Private\PangEffect.cpp" />
+    <ClCompile Include="..\Private\Patrick_Player.cpp" />
+    <ClCompile Include="..\Private\Player.cpp" />
+    <ClCompile Include="..\Private\Player_Slame.cpp" />
+    <ClCompile Include="..\Private\PoofEffect.cpp" />
+    <ClCompile Include="..\Private\Poster.cpp" />
+    <ClCompile Include="..\Private\Poster2.cpp" />
+    <ClCompile Include="..\Private\Pos_Light.cpp" />
+    <ClCompile Include="..\Private\RainBow.cpp" />
+    <ClCompile Include="..\Private\Ring_Pillar.cpp" />
+    <ClCompile Include="..\Private\Ring_Top.cpp" />
+    <ClCompile Include="..\Private\Robo.cpp" />
+    <ClCompile Include="..\Private\Robo_2.cpp" />
+    <ClCompile Include="..\Private\Robo_3.cpp" />
+    <ClCompile Include="..\Private\Rope_Top.cpp" />
+    <ClCompile Include="..\Private\Rope_Top_Broken.cpp" />
+    <ClCompile Include="..\Private\Sky.cpp" />
+    <ClCompile Include="..\Private\SmokeEffect.cpp" />
+    <ClCompile Include="..\Private\Sandy_Slame.cpp" />
+    <ClCompile Include="..\Private\Scoreboard.cpp" />
+    <ClCompile Include="..\Private\Scoreboard_Broken.cpp" />
+    <ClCompile Include="..\Private\Scoreboard_Ropes.cpp" />
+    <ClCompile Include="..\Private\SkyBox_Poeisdom.cpp" />
+    <ClCompile Include="..\Private\SmokeEffect2.cpp" />
+    <ClCompile Include="..\Private\SM_PD_Banner_01.cpp" />
+    <ClCompile Include="..\Private\SnadySmokeEffect.cpp" />
+    <ClCompile Include="..\Private\SpongeBob.cpp" />
+    <ClCompile Include="..\Private\SpongeBob_Foot_L.cpp" />
+    <ClCompile Include="..\Private\SpongeBob_Wand.cpp" />
+    <ClCompile Include="..\Private\Squidward.cpp" />
+    <ClCompile Include="..\Private\Stairs_02.cpp" />
+    <ClCompile Include="..\Private\Stairs_04.cpp" />
+    <ClCompile Include="..\Private\Taxi.cpp" />
+    <ClCompile Include="..\Private\TaxiStop.cpp" />
+    <ClCompile Include="..\Private\Terrain.cpp" />
+    <ClCompile Include="..\Private\Tree.cpp" />
+    <ClCompile Include="..\Private\TwinkleEffect.cpp" />
+    <ClCompile Include="..\Private\UnderPangEffect.cpp" />
+    <ClCompile Include="..\Private\Underpants.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Client.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Cell.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Deferred.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Point_Instance.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_Rect_Instance.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxAnimModel.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxModel.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxNorTex.hlsl" />
+    <FxCompile Include="..\..\Reference\ShaderFiles\Shader_VtxTex.hlsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
