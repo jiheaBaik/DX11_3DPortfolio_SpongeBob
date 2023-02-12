@@ -1418,11 +1418,17 @@ HRESULT CTerrainManager::Picking()
 		int iRc = 0;
 		char *err_msg = 0;
 		sqlite3_stmt *res = nullptr;
-
+		//objInfo.pLayerTag
 		_float3 vtrGetPos = {};
-		string sqlResult = "select * from " + m_sTable;
+		//콤보박스이름의 레이어테그를 따와 검색
+		string sqlResult = "select * from " + m_sTable + " where LayerTag = @objLayer";
 		const char* pSql = sqlResult.c_str();
 		iRc = sqlite3_prepare_v2(m_db, pSql, -1, &res, NULL);
+
+		int index = sqlite3_bind_parameter_index(res, "@objLayer");
+		_bstr_t temp1(objInfo.pLayerTag);
+		const char* pObjLayer = temp1;
+		sqlite3_bind_text(res, index, pObjLayer, -1, SQLITE_TRANSIENT);
 
 		while (sqlite3_step(res) == SQLITE_ROW){
 			_bstr_t bstrLayerTag((char*)sqlite3_column_text(res, LAYER_TAG));
@@ -1431,11 +1437,11 @@ HRESULT CTerrainManager::Picking()
 			CModel* m_pObjnVeffer = (CModel*)pGameInstance->Get_Component(LEVEL_TERRAIN, bstrLayerTag, TEXT("Com_VIBuffer"), iIndex);
 			if (nullptr == m_pObjnVeffer)
 				return E_FAIL;
-
+			
 			CTransform* m_pObjTransform = (CTransform*)pGameInstance->Get_Component(LEVEL_TERRAIN, bstrLayerTag, TEXT("Com_Transform"), iIndex);
 			if (nullptr == m_pObjTransform)
 				return E_FAIL;
-
+			//메쉬컨테이너에서  가져오는거라 큐브나 애니메이션은 불가 나중에 예외처리하기.
 			if (pGameInstance->Picking(m_pObjTransform, (CVIBuffer*)m_pObjnVeffer->GetMeshContainers().front(), &vtrGetPos)){
 				m_iObj_current = iIndex;
 				break;
