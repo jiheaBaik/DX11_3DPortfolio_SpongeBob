@@ -106,18 +106,6 @@ HRESULT CBoss_Sandy::Render()
 
 
 		}
-
-	/*	ID3D11BlendState * d3dBlendState;
-		D3D11_BLEND_DESC bd;
-		ZeroMemory(&bd, sizeof(D3D11_BLEND_DESC));
-		bd.RenderTarget[0].BlendEnable = false;
-		bd.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
-
-		if (FAILED(m_pDevice->CreateBlendState(&bd, &d3dBlendState)))
-			return false;
-
-		m_pContext->OMSetBlendState(d3dBlendState, 0, 0xffffffff);
-		Safe_Release(d3dBlendState);*/
 		return S_OK;
 
 	}
@@ -128,11 +116,9 @@ HRESULT CBoss_Sandy::SetUp_Components()
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxAnimModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Boss_Sandy_Head"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 

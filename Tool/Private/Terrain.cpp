@@ -63,8 +63,6 @@ HRESULT CTerrain::Render()
 
 	m_pVIBufferCom->Render();
 
-//	D3D11_RASTERIZER_DESC wfd;
-//	ID3D11RasterizerState*		m_WireframeRS = nullptr;
 	ZeroMemory(&wfd, sizeof(D3D11_RASTERIZER_DESC));
 	wfd.FillMode = D3D11_FILL_SOLID;
 	wfd.CullMode = D3D11_CULL_NONE;
@@ -82,19 +80,9 @@ HRESULT CTerrain::SetUp_Components()
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	///* For.Com_Texture */
-	//if (FAILED(__super::Add_Component(TEXT("Com_Texture"), LEVEL_TERRAIN, TEXT("Prototype_Component_Texture_Terrain"), (CComponent**)&m_pTextureCom)))
-	//	return E_FAIL;
-
-	///* For.Com_Shader */
-	//if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_TERRAIN, TEXT("Prototype_Component_Shader_VtxNorTex"), (CComponent**)&m_pShaderCom)))
-	//	return E_FAIL;
-
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxTex"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_VIBuffer_Terrain"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -117,9 +105,6 @@ HRESULT CTerrain::SetUp_ConstantTable()
 	if (FAILED(m_pShaderCom->Set_RawValue("g_ProjMatrix", &pGameInstance->Get_Transformfloat4x4_TP(CPipeLine::D3DTS_PROJ), sizeof(_float4x4))))
 		return E_FAIL;
 
-	/*if (FAILED(m_pTextureCom->SetUp_ConstantTable(m_pShaderCom, "g_DiffuseTexture", 0)))
-		return E_FAIL;*/
-
 	RELEASE_INSTANCE(CGameInstance);
 
 	return S_OK;
@@ -127,7 +112,6 @@ HRESULT CTerrain::SetUp_ConstantTable()
 
 void CTerrain::SetTerrain(_uint x, _uint y)
 {
-	//m_pVIBufferCom->SetTerrain(x, y);
 }
 
 CTerrain * CTerrain::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)

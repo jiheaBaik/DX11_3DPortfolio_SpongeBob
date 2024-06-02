@@ -49,7 +49,6 @@ private:
 	CShader*					m_pShaderCom = nullptr;
 	CRenderer*					m_pRendererCom = nullptr;
 	CModel*						m_pVIBufferCom = nullptr;
-	//CNavigation*				m_pNavigationCom = nullptr;
 
 private:
 	HRESULT SetUp_Components();

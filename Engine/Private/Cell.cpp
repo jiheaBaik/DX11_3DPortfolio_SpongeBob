@@ -79,8 +79,6 @@ _bool CCell::isIn(_fvector vPosition, _int* pNeighborIndex)
 		XMLoadFloat3(&m_vPoints[1]),
 		XMLoadFloat3(&m_vPoints[2]));
 
-	// y = (-ax - cz - d) / b
-	//ax+by+cz+d=0 
 	m_GetfY = (-XMVectorGetX(vPlane) * XMVectorGetX(vPosition) - XMVectorGetZ(vPlane) * XMVectorGetZ(vPosition) - XMVectorGetW(vPlane)) / XMVectorGetY(vPlane);
 	
 
@@ -92,8 +90,6 @@ HRESULT CCell::Render()
 {
 	if (nullptr == m_pVIBuffer)
 		return E_FAIL;
-
-
 
 	m_pVIBuffer->Render();
 

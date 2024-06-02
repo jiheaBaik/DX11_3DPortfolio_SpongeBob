@@ -17,7 +17,6 @@ class CUnderpants final : public CGameObject
 
 	typedef struct ObjInfoDesc
 	{
-		//LEVEL toolLevel;
 		OBJ_CLIENTLEVELE clientLevel;
 		const _tchar * pObj;
 		const _tchar * pLayerTag;

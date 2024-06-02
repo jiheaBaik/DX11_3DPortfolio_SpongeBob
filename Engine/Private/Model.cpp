@@ -5,12 +5,12 @@
 #include "Shader.h"
 #include "Animation.h"
 
-CModel::CModel(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CModel::CModel(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CComponent(pDevice, pContext)
 {
 }
 
-CModel::CModel(const CModel & Prototype)
+CModel::CModel(const CModel& Prototype)
 	: CComponent(Prototype)
 	, m_MeshContainers(Prototype.m_MeshContainers)
 	, m_Materials(Prototype.m_Materials)
@@ -21,7 +21,6 @@ CModel::CModel(const CModel & Prototype)
 	, m_iCurrentAnimIndex(Prototype.m_iCurrentAnimIndex)
 	, m_pScene(Prototype.m_pScene)
 	, m_eModelType(Prototype.m_eModelType)
-	//, m_Animations(Prototype.m_Animations)
 {
 	for (auto& pMeshContainer : m_MeshContainers)
 		Safe_AddRef(pMeshContainer);
@@ -33,32 +32,32 @@ CModel::CModel(const CModel & Prototype)
 	}
 }
 
-CHierarchyNode * CModel::Get_HierarchyNodes(const char * pHierarchyNodeName)
+CHierarchyNode* CModel::Get_HierarchyNodes(const char* pHierarchyNodeName)
 {
 	auto	iter = find_if(m_HierarchyNodes.begin(), m_HierarchyNodes.end(), [&](CHierarchyNode* pNode)
-	{
-		return !strcmp(pHierarchyNodeName, pNode->Get_Name());
-	});
+		{
+			return !strcmp(pHierarchyNodeName, pNode->Get_Name());
+		});
 
 	return *iter;
 }
 
-_float4x4 * CModel::Get_BoneMatrixPtr(const char * pHierarchyNodeName)
+_float4x4* CModel::Get_BoneMatrixPtr(const char* pHierarchyNodeName)
 {
-	CHierarchyNode*		pNode = Get_HierarchyNodes(pHierarchyNodeName);
+	CHierarchyNode* pNode = Get_HierarchyNodes(pHierarchyNodeName);
 	if (nullptr == pNode)
 		return nullptr;
 
 	return pNode->Get_CombinedTransformationMatrixPtr();
 }
 
-_float4x4 CModel::Get_BoneOffsetMatrix(const char * pHierarchyNodeName)
+_float4x4 CModel::Get_BoneOffsetMatrix(const char* pHierarchyNodeName)
 {
 	_float4x4		OffsetMatrix;
 
 	XMStoreFloat4x4(&OffsetMatrix, XMMatrixIdentity());
 
-	CHierarchyNode*		pNode = Get_HierarchyNodes(pHierarchyNodeName);
+	CHierarchyNode* pNode = Get_HierarchyNodes(pHierarchyNodeName);
 	if (nullptr == pNode)
 		return OffsetMatrix;
 
@@ -94,9 +93,9 @@ HRESULT CModel::NativeConstruct_Prototype(TYPE eModelType, const char* pModelFil
 		return E_FAIL;
 
 	sort(m_HierarchyNodes.begin(), m_HierarchyNodes.end(), [](CHierarchyNode* pSour, CHierarchyNode* pDest)
-	{
-		return pSour->Get_Depth() < pDest->Get_Depth();
-	});
+		{
+			return pSour->Get_Depth() < pDest->Get_Depth();
+		});
 
 	if (FAILED(Create_MeshContainers(PivotMatrix)))
 		return E_FAIL;
@@ -112,15 +111,15 @@ HRESULT CModel::NativeConstruct_Prototype(TYPE eModelType, const char* pModelFil
 	return S_OK;
 }
 
-HRESULT CModel::NativeConstruct(void * pArg)
+HRESULT CModel::NativeConstruct(void* pArg)
 {
 	if (FAILED(Create_HierarchyNodes(m_pScene->mRootNode, nullptr, 0)))
 		return E_FAIL;
 
 	sort(m_HierarchyNodes.begin(), m_HierarchyNodes.end(), [](CHierarchyNode* pSour, CHierarchyNode* pDest)
-	{
-		return pSour->Get_Depth() < pDest->Get_Depth();
-	});
+		{
+			return pSour->Get_Depth() < pDest->Get_Depth();
+		});
 
 	vector<CMeshContainer*>		MeshContainers;
 
@@ -137,7 +136,6 @@ HRESULT CModel::NativeConstruct(void * pArg)
 
 	if (FAILED(Create_Animation()))
 		return E_FAIL;
-	//m_iPastAnimIndex = m_iCurrentAnimIndex;
 
 	return S_OK;
 }
@@ -153,12 +151,8 @@ void CModel::Update_Animation(_double TimeDelta)
 
 
 	m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, true, 1);
-	/* 부모로부터 자식뼈에게 누적시켜 전달한다.(CombinedTransformationMatrix) */
 	for (auto& pHierarchyNode : m_HierarchyNodes)
 		pHierarchyNode->Update_CombinedTransformationMatrix();
-
-	//Set_IsFinish(m_Animations[m_iCurrentAnimIndex]->Get_IsFinish());
-
 }
 
 void CModel::Update_SpongeBobAnimation(_double TimeDelta, _uint _Currentindex, _bool _isOnly, _uint size)
@@ -167,10 +161,8 @@ void CModel::Update_SpongeBobAnimation(_double TimeDelta, _uint _Currentindex, _
 
 	if (m_iCurrentAnimIndex >= m_iNumAnimations)
 		return;
-	//만약 하나의 애니메이션으로 반복하는 녀석이면
 	if (_isOnly)
 	{
-		//하나만 수행 하도록 한다.
 		m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 		if (m_Animations[m_iCurrentAnimIndex]->Get_IsFinish())
 			m_bIsfinish = true;
@@ -179,44 +171,30 @@ void CModel::Update_SpongeBobAnimation(_double TimeDelta, _uint _Currentindex, _
 	}
 	else
 	{
-		//애니메이션이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_IsFinish())
 		{
-
-			//다음 애니메이션을 가져와 선형보간을 한다
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices_Next(TimeDelta, _isOnly, m_Animations[_Currentindex]->Get_m_Channels());
 			bNotNext = true;
 		}
 		else
 		{
-
-			//애니메이션이 끝나지 않았다면 선생님 코드를 수행한다 (하나의 애니메이션의 키프레임끼리 선형보간)
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 			bNotNext = false;
 		}
-		//만약 다음애니메이션끼리 선형보간이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_NextFinish())
 		{
-			//현재의 다음애니메이션의 초기화를 수행한다.
 			m_Animations[_Currentindex]->Set_IsFinish(false);
 			m_Animations[_Currentindex]->Set_Zero(0.0);
-			//그리고 다음애니메이션의 선형보간이 끝났다는 bool값을 설정해  객체가 알도록 한다(다음 애니메이션을 넘길 수 있는 타이밍을 전하기 위함)
 			m_bNextISFinish = true;
-			//현재의 애니메이션의 설정도 초기화해준다.
 			m_Animations[m_iCurrentAnimIndex]->Set_Finish(false);
-			//기존과 현재를 바꾼다.
 			m_iPastAnimIndex = m_iCurrentAnimIndex;
 		}
 		else
 		{
 			m_bNextISFinish = false;
-
 		}
 	}
 
-
-
-	/* 부모로부터 자식뼈에게 누적시켜 전달한다.(CombinedTransformationMatrix) */
 	for (auto& pHierarchyNode : m_HierarchyNodes)
 		pHierarchyNode->Update_CombinedTransformationMatrix();
 
@@ -226,100 +204,73 @@ void CModel::Update_SpongeBobAnimation(_double TimeDelta, _uint _Currentindex, _
 
 void CModel::Update_Boss_Sandy_Head_Animation(_double TimeDelta, _uint _Currentindex, _bool _isOnly, _uint size)
 {
-	
+
 	if (m_iCurrentAnimIndex >= m_iNumAnimations)
 		return;
-	//만약 하나의 애니메이션으로 반복하는 녀석이면
 	if (_isOnly)
 	{
-		//하나만 수행 하도록 한다.
 		m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 	}
 	else
 	{
-		//애니메이션이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_IsFinish())
 		{
-
-			//다음 애니메이션을 가져와 선형보간을 한다
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices_Next(TimeDelta, _isOnly, m_Animations[_Currentindex]->Get_m_Channels());
 			bNotNext = true;
 		}
 		else
 		{
-
-			//애니메이션이 끝나지 않았다면 선생님 코드를 수행한다 (하나의 애니메이션의 키프레임끼리 선형보간)
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 			bNotNext = false;
 		}
-		//만약 다음애니메이션끼리 선형보간이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_NextFinish())
 		{
-			//현재의 다음애니메이션의 초기화를 수행한다.
 			m_Animations[_Currentindex]->Set_IsFinish(false);
 			m_Animations[_Currentindex]->Set_Zero(0.0);
-			//그리고 다음애니메이션의 선형보간이 끝났다는 bool값을 설정해  객체가 알도록 한다(다음 애니메이션을 넘길 수 있는 타이밍을 전하기 위함)
 			m_bNextISFinish = true;
-			//현재의 애니메이션의 설정도 초기화해준다.
+
 			m_Animations[m_iCurrentAnimIndex]->Set_Finish(false);
-			//기존과 현재를 바꾼다.
 			m_iPastAnimIndex = m_iCurrentAnimIndex;
 		}
 		else
 		{
 			m_bNextISFinish = false;
-
 		}
 	}
-
-	
-
-	/* 부모로부터 자식뼈에게 누적시켜 전달한다.(CombinedTransformationMatrix) */
 	for (auto& pHierarchyNode : m_HierarchyNodes)
 		pHierarchyNode->Update_CombinedTransformationMatrix();
 
 	Set_IsFinish(m_Animations[m_iCurrentAnimIndex]->Get_IsFinish());
-	
+
 }
 void CModel::Update_Boss_Sandy_Animation(_double TimeDelta, _uint _Currentindex, _bool _isOnly, _uint size)
 {
 
 	if (m_iCurrentAnimIndex >= m_iNumAnimations)
 		return;
-	//만약 하나의 애니메이션으로 반복하는 녀석이면
 	if (_isOnly)
 	{
-		//하나만 수행 하도록 한다.
 		m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 	}
 	else
 	{
-		//애니메이션이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_IsFinish())
 		{
-
-			//다음 애니메이션을 가져와 선형보간을 한다
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices_Next(TimeDelta, _isOnly, m_Animations[_Currentindex]->Get_m_Channels());
 			bNotNext = true;
 		}
 		else
 		{
-
-			//애니메이션이 끝나지 않았다면 선생님 코드를 수행한다 (하나의 애니메이션의 키프레임끼리 선형보간)
 			m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, _isOnly, size);
 			bNotNext = false;
 		}
-		//만약 다음애니메이션끼리 선형보간이 끝났다면
 		if (m_Animations[m_iCurrentAnimIndex]->Get_NextFinish())
 		{
-			//현재의 다음애니메이션의 초기화를 수행한다.
 			m_Animations[_Currentindex]->Set_IsFinish(false);
 			m_Animations[_Currentindex]->Set_Zero(0.0);
-			//그리고 다음애니메이션의 선형보간이 끝났다는 bool값을 설정해  객체가 알도록 한다(다음 애니메이션을 넘길 수 있는 타이밍을 전하기 위함)
 			m_bNextISFinish = true;
-			//현재의 애니메이션의 설정도 초기화해준다.
+
 			m_Animations[m_iCurrentAnimIndex]->Set_Finish(false);
-			//기존과 현재를 바꾼다.
 			m_iPastAnimIndex = m_iCurrentAnimIndex;
 		}
 		else
@@ -328,10 +279,6 @@ void CModel::Update_Boss_Sandy_Animation(_double TimeDelta, _uint _Currentindex,
 
 		}
 	}
-
-
-
-	/* 부모로부터 자식뼈에게 누적시켜 전달한다.(CombinedTransformationMatrix) */
 	for (auto& pHierarchyNode : m_HierarchyNodes)
 		pHierarchyNode->Update_CombinedTransformationMatrix();
 
@@ -346,15 +293,13 @@ void CModel::Update_King_NeptuneAnimation(_double TimeDelta)
 	vector<KEYFRAME> _pastKeyframe;
 	vector<KEYFRAME> _curentKeyframe;
 
-	m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, true,1);
-	/* 부모로부터 자식뼈에게 누적시켜 전달한다.(CombinedTransformationMatrix) */
+	m_Animations[m_iCurrentAnimIndex]->Update_TransformationMatrices(TimeDelta, true, 1);
+
 	for (auto& pHierarchyNode : m_HierarchyNodes)
 		pHierarchyNode->Update_CombinedTransformationMatrix();
-
-
 }
 
-HRESULT CModel::Bind_SRV(CShader * pShader, const char * pConstantName, _uint iMeshContainerIndex, aiTextureType eTextureType)
+HRESULT CModel::Bind_SRV(CShader* pShader, const char* pConstantName, _uint iMeshContainerIndex, aiTextureType eTextureType)
 {
 	_uint	iMaterialIndex = m_MeshContainers[iMeshContainerIndex]->Get_MaterialIndex();
 
@@ -390,7 +335,7 @@ HRESULT CModel::Create_MeshContainers(_fmatrix PivotMatrix)
 
 	for (_uint i = 0; i < m_iNumMeshContainers; ++i)
 	{
-		CMeshContainer*		pMeshContainer = CMeshContainer::Create(m_pDevice, m_pContext, m_eModelType, m_pScene->mMeshes[i], this, PivotMatrix);
+		CMeshContainer* pMeshContainer = CMeshContainer::Create(m_pDevice, m_pContext, m_eModelType, m_pScene->mMeshes[i], this, PivotMatrix);
 		if (nullptr == pMeshContainer)
 			return E_FAIL;
 
@@ -406,7 +351,7 @@ HRESULT CModel::Create_Materials(const char* pModelFilePath)
 
 	for (_uint i = 0; i < m_iNumMaterials; ++i)
 	{
-		aiMaterial*		pAIMaterial = m_pScene->mMaterials[i];
+		aiMaterial* pAIMaterial = m_pScene->mMaterials[i];
 
 		MODELMATERIALDESC			ModelMaterial;
 		ZeroMemory(&ModelMaterial, sizeof(MODELMATERIALDESC));
@@ -444,7 +389,7 @@ HRESULT CModel::Create_Materials(const char* pModelFilePath)
 	return S_OK;
 }
 
-HRESULT CModel::Create_HierarchyNodes(aiNode * pNode, CHierarchyNode * pParent, _uint iDepth)
+HRESULT CModel::Create_HierarchyNodes(aiNode* pNode, CHierarchyNode* pParent, _uint iDepth)
 {
 	if (nullptr == pNode)
 		return S_OK;
@@ -452,7 +397,7 @@ HRESULT CModel::Create_HierarchyNodes(aiNode * pNode, CHierarchyNode * pParent, 
 	_float4x4		TransformationMatrix;
 	memcpy(&TransformationMatrix, &pNode->mTransformation, sizeof(_float4x4));
 
-	CHierarchyNode*			pHierarchyNode = CHierarchyNode::Create(pNode->mName.data, XMLoadFloat4x4(&TransformationMatrix), pParent, iDepth);
+	CHierarchyNode* pHierarchyNode = CHierarchyNode::Create(pNode->mName.data, XMLoadFloat4x4(&TransformationMatrix), pParent, iDepth);
 	if (nullptr == pHierarchyNode)
 		return E_FAIL;
 
@@ -472,9 +417,9 @@ HRESULT CModel::Create_Animation()
 
 	for (_uint i = 0; i < m_iNumAnimations; ++i)
 	{
-		aiAnimation*		pAIAnim = m_pScene->mAnimations[i];
+		aiAnimation* pAIAnim = m_pScene->mAnimations[i];
 
-		CAnimation*		pAnimation = CAnimation::Create(pAIAnim, this);
+		CAnimation* pAnimation = CAnimation::Create(pAIAnim, this);
 		if (nullptr == pAnimation)
 			return E_FAIL;
 
@@ -484,9 +429,9 @@ HRESULT CModel::Create_Animation()
 	return S_OK;
 }
 
-CModel * CModel::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext, TYPE eModelType, const char * pModelFilePath, const char * pModelFileName, _fmatrix PivotMatrix)
+CModel* CModel::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext, TYPE eModelType, const char* pModelFilePath, const char* pModelFileName, _fmatrix PivotMatrix)
 {
-	CModel*		pInstance = new CModel(pDevice, pContext);
+	CModel* pInstance = new CModel(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype(eModelType, pModelFilePath, pModelFileName, PivotMatrix)))
 	{
@@ -496,9 +441,9 @@ CModel * CModel::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext, 
 	return pInstance;
 }
 
-CComponent * CModel::Clone(void * pArg)
+CComponent* CModel::Clone(void* pArg)
 {
-	CModel*		pInstance = new CModel(*this);
+	CModel* pInstance = new CModel(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{
@@ -525,9 +470,6 @@ void CModel::Free()
 	{
 		for (_uint i = 0; i < AI_TEXTURE_TYPE_MAX; ++i)
 			Safe_Release(MaterialDesc.pMaterialTexture[i]);
-
-		/*if (false == m_isCloned)
-			Safe_Delete(pMaterialDesc);*/
 	}
 
 	for (auto& pMeshContainer : m_MeshContainers)

@@ -2,12 +2,12 @@
 #include "..\Public\GrassInstance.h"
 #include "GameInstance.h"
 
-CGrassInstance::CGrassInstance(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CGrassInstance::CGrassInstance(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CGameObject(pDevice, pContext)
 {
 }
 
-CGrassInstance::CGrassInstance(const CGrassInstance & Prototype)
+CGrassInstance::CGrassInstance(const CGrassInstance& Prototype)
 	: CGameObject(Prototype)
 {
 
@@ -19,7 +19,7 @@ HRESULT CGrassInstance::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CGrassInstance::NativeConstruct(void * pArg)
+HRESULT CGrassInstance::NativeConstruct(void* pArg)
 {
 	CTransform::TRANSFORMDESC		TransformDesc(5.f, XMConvertToRadians(90.0f));
 
@@ -32,7 +32,7 @@ HRESULT CGrassInstance::NativeConstruct(void * pArg)
 	if (FAILED(SetUp_Components()))
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	CTransform* m_pCameraTransform = (CTransform*)pGameInstance->Get_Component(LEVEL_TERRAIN, TEXT("Layer_Camera"), TEXT("Com_Transform"));
 	_vector m_vCameradPos = m_pCameraTransform->Get_State(CTransform::STATE_POSITION);
@@ -53,27 +53,19 @@ HRESULT CGrassInstance::NativeConstruct(void * pArg)
 
 void CGrassInstance::Tick(_double TimeDelta)
 {
-	//m_pVIBufferCom->Update2(TimeDelta * 0.1f);
-
-	
-
 }
 
 void CGrassInstance::LateTick(_double TimeDelta)
 {
 	if (nullptr == m_pRendererCom)
 		return;
-	//if (m_IsRender)
-	{
-		m_pRendererCom->Add_RenderGroup(CRenderer::RENDER_NONALPHABLEND, this);
-		m_icount++;
-	}
+	m_pRendererCom->Add_RenderGroup(CRenderer::RENDER_NONALPHABLEND, this);
+	m_icount++;
 
 }
 
 void CGrassInstance::Reset()
 {
-	//m_pVIBufferCom->Reset();
 }
 
 
@@ -94,19 +86,15 @@ HRESULT CGrassInstance::Render()
 
 HRESULT CGrassInstance::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxRectInstance"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_Texture */
 	if (FAILED(__super::Add_Component(TEXT("Com_Texture"), LEVEL_STATIC, TEXT("Prototype_Component_Texture_Grass"), (CComponent**)&m_pTextureCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_VIBuffer_Rect_Instance"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -127,7 +115,7 @@ HRESULT CGrassInstance::SetUp_SRV()
 	if (nullptr == m_pShaderCom)
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_WorldMatrix", &m_pTransformCom->Get_WorldFloat4x4_TP(), sizeof(_float4x4))))
 		return E_FAIL;
@@ -149,9 +137,9 @@ HRESULT CGrassInstance::SetUp_SRV()
 	return S_OK;
 }
 
-CGrassInstance * CGrassInstance::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CGrassInstance* CGrassInstance::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 {
-	CGrassInstance*		pInstance = new CGrassInstance(pDevice, pContext);
+	CGrassInstance* pInstance = new CGrassInstance(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
@@ -161,9 +149,9 @@ CGrassInstance * CGrassInstance::Create(ID3D11Device * pDevice, ID3D11DeviceCont
 	return pInstance;
 }
 
-CGameObject * CGrassInstance::Clone(void * pArg)
+CGameObject* CGrassInstance::Clone(void* pArg)
 {
-	CGrassInstance*		pInstance = new CGrassInstance(*this);
+	CGrassInstance* pInstance = new CGrassInstance(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{

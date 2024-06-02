@@ -19,13 +19,9 @@ public:
 public:
 	void Update(_double TimeDelta);
 	void Update2(_double TimeDelta);
-
 	void FiledInitial();
 	void GrassInitial(_float3 _pos, _vector _right, _vector _up, _vector _look);
-
 	void Reset();
-	//void EditSpeed(_float _speed){ m_pSpeeds  = }
-	
 private:
 	ID3D11Buffer*					m_pVBInstance = nullptr;
 	_uint							m_iStrideInstance = 0;

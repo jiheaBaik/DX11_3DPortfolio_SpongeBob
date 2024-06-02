@@ -69,34 +69,21 @@ HRESULT CSpongeBob::Render()
 			m_pVIBufferCom->Render(i, m_pShaderCom, 0);
 		}
 	}
-	
-
 
 	return S_OK;
 }
 
 HRESULT CSpongeBob::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxAnimModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_SpongeBob"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
-	/*if (m_Info.fScale.x == 0.f || m_Info.fScale.x == NULL)
-		m_Info.fScale = _float3(1.0f, 1.0f, 1.0f);
-	m_pTransformCom->Set_Scaled(_float3(m_Info.fScale.x, m_Info.fScale.y, m_Info.fScale.z));
-	if (m_Info.fPos.x == 0.f || m_Info.fScale.x == NULL)
-		m_Info.fPos = _float3(0.f, 0.f, 0.f);
-	m_pTransformCom->Set_State(CTransform::STATE_POSITION, XMVectorSet(m_Info.fPos.x, m_Info.fPos.y, m_Info.fPos.z, 1));
-	if(m_Info.fRotation != 0.f || m_Info.fRotation != NULL)
-		m_pTransformCom->Rotation(XMLoadFloat3(&m_Info.fAxist), m_Info.fRotation);*/
 	return S_OK;
 }
 

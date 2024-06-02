@@ -59,32 +59,19 @@ HRESULT CPos_Light::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-
-		//	m_pShaderCom->Begin(0);
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 0);
 	}
-
-
-
 	return S_OK;
 }
 
 HRESULT CPos_Light::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Pos_Light"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 

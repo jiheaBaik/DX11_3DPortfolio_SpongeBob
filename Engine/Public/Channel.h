@@ -12,14 +12,13 @@ public:
 
 public:
 	HRESULT NativeConstruct(aiNodeAnim* pChannel, class CModel* pModel);
-	void Update_TransformationMatrices(_double TimeAcc ,_float size);
-	void Update_TransformationMatricesNext(_double TimeAcc,  vector<KEYFRAME> _CurKeyframe, _float fRatio);
+	void Update_TransformationMatrices(_double TimeAcc, _float size);
+	void Update_TransformationMatricesNext(_double TimeAcc, vector<KEYFRAME> _CurKeyframe, _float fRatio);
 
-	
-	vector<KEYFRAME> Get_keyframe();// { return m_KeyFrames; }
+
+	vector<KEYFRAME> Get_keyframe();
 	_bool Get_Finish() { return m_bISFinish; }
 	void Set_Finish(_bool _isFinish) { m_bISFinish = _isFinish; }
-//	void Set_vFrame(vector<KEYFRAME> _frame) { m_PastKeyFrames = _frame; }
 
 	_bool Get_NextFinish() { return m_bNextISFinish; }
 	_bool Get_Last() { return bIsLast; }
@@ -35,15 +34,15 @@ private:
 	vector<KEYFRAME>		m_KeyFrames;
 	vector<KEYFRAME>		m_CurKeyFrames;
 
-	class CHierarchyNode*	m_pHierarchyNode = nullptr;
+	class CHierarchyNode* m_pHierarchyNode = nullptr;
 	_bool m_isTurn = false;
 
 
 	_bool m_bISFinish = false;
 	_bool m_bNextISFinish = false;
 
-	 _float fRatio = 0;
-	  _bool bIsLast = false;
+	_float fRatio = 0;
+	_bool bIsLast = false;
 
 public:
 	static CChannel* Create(aiNodeAnim* pChannel, class CModel* pModel);

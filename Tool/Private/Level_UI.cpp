@@ -209,13 +209,9 @@ HRESULT CLevel_UI::Create()
 				else
 					m_objInfo.pTextureInfo = 2;
 
-					//m_objInfo.pTextureInfo = textureNum;
-
-
 				if (FAILED(pGameInstance->Clone_GameObject(LEVEL_UI, m_objInfo.pLayerTag, m_objInfo.pPrototypeTag, &m_objInfo)))
 					return E_FAIL;
 				m_objInfo.fPos.x += 15;
-				//count++;
 			}
 		}
 		else
@@ -334,9 +330,6 @@ HRESULT CLevel_UI::Load()
 
 	if (ImGui::Begin("Data Management"))
 	{
-		/*if (m_IsConnection)
-		ImGui::TextColored(ImVec4(1.0f, 0.0f, 1.0f, 1.0f), "DB Connection : Completed");
-		*/
 		_uint count = 0;
 		_uint textureNum = 0;
 
@@ -353,7 +346,6 @@ HRESULT CLevel_UI::Load()
 
 			while (sqlite3_step(res3) == SQLITE_ROW)
 			{
-				//m_objInfo.toolLevel = (LEVEL)sqlite3_column_int(res3, 0);
 				m_objInfo.clientLevel = (OBJ_CLIENTLEVELE)sqlite3_column_int(res3, 1);
 
 				char			temp[MAX_PATH] = "";

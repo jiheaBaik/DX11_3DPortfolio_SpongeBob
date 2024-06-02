@@ -7,7 +7,7 @@ CChannel::CChannel()
 {
 }
 
-HRESULT CChannel::NativeConstruct(aiNodeAnim * pChannel, CModel* pModel)
+HRESULT CChannel::NativeConstruct(aiNodeAnim* pChannel, CModel* pModel)
 {
 	strcpy_s(m_szName, pChannel->mNodeName.data);
 
@@ -67,19 +67,9 @@ void CChannel::Update_TransformationMatrices(_double TimeAcc, _float size)
 	_vector			vScale;
 	_vector			vRotation;
 	_vector			vPosition;
-	
-//	if (bIsfrist)
-//	{
-		if (TimeAcc < m_KeyFrames[1].Time)
-			m_iCurrentKeyFrame = 0;
 
-		//bIsfrist = false;
-	//}
-	
-	/*if (size == 0)
-		m_iCurrentKeyFrame = 0;*/
-	//else
-	//	int a = 0;
+	if (TimeAcc < m_KeyFrames[1].Time)
+		m_iCurrentKeyFrame = 0;
 	if (TimeAcc >= m_KeyFrames.back().Time)
 	{
 		vScale = XMLoadFloat3(&m_KeyFrames.back().vScale);
@@ -88,35 +78,11 @@ void CChannel::Update_TransformationMatrices(_double TimeAcc, _float size)
 		m_CurKeyFrames = m_KeyFrames;
 
 		bIsLast = true;
-
-	/*	_float		fRatio = (TimeAcc - m_KeyFrames[m_iCurrentKeyFrame].Time)
-			/ (m_KeyFrames.back().Time - m_KeyFrames.front().Time);
-
-		_vector		vSourScale, vDestScale;
-		_vector		vSourRotation, vDestRotation;
-		_vector		vSourPosition, vDestPosition;
-
-		vSourScale = XMLoadFloat3(&m_KeyFrames.front().vScale);
-		vDestScale = XMLoadFloat3(&m_KeyFrames.back().vScale);
-
-		vSourRotation = XMLoadFloat4(&m_KeyFrames.front().vRotation);
-		vDestRotation = XMLoadFloat4(&m_KeyFrames.back().vRotation);
-
-		vSourPosition = XMLoadFloat4(&m_KeyFrames.front().vPosition);
-		vDestPosition = XMLoadFloat4(&m_KeyFrames.back().vPosition);
-
-		vScale = XMVectorLerp(vSourScale, vDestScale, fRatio);
-		vRotation = XMQuaternionSlerp(vSourRotation, vDestRotation, fRatio);
-		vPosition = XMVectorLerp(vSourPosition, vDestPosition, fRatio);
-		m_CurKeyFrames = m_KeyFrames;*/
-
 	}
 	else
 	{
-	//	m_bISFinish = false;
-
 		while (TimeAcc > m_KeyFrames[m_iCurrentKeyFrame + 1].Time)
-		{ 
+		{
 			++m_iCurrentKeyFrame;
 		}
 
@@ -139,8 +105,6 @@ void CChannel::Update_TransformationMatrices(_double TimeAcc, _float size)
 		vScale = XMVectorLerp(vSourScale, vDestScale, fRatio);
 		vRotation = XMQuaternionSlerp(vSourRotation, vDestRotation, fRatio);
 		vPosition = XMVectorLerp(vSourPosition, vDestPosition, fRatio);
-
-
 	}
 
 
@@ -153,18 +117,6 @@ void CChannel::Update_TransformationMatrices(_double TimeAcc, _float size)
 
 void CChannel::Update_TransformationMatricesNext(_double TimeAcc, vector<KEYFRAME> _CurKeyframe, _float fRatio)
 {
-	
-	/*if (fRatio >= 1)
-	{
-		fRatio = 0;
-		m_bNextISFinish = true;
-		return;
-	}
-	else
-		m_bNextISFinish = false;
-		
-
-	fRatio += 0.01;*/
 
 	_vector			vScale;
 	_vector			vRotation;
@@ -174,10 +126,6 @@ void CChannel::Update_TransformationMatricesNext(_double TimeAcc, vector<KEYFRAM
 	_vector		vSourScale, vDestScale;
 	_vector		vSourRotation, vDestRotation;
 	_vector		vSourPosition, vDestPosition;
-
-	//위 함수에서 m_iCurrentKeyFrame + 1 로 끝났기에 m_iCurrentKeyFrame + 1부터시작해야 됨
-	//혹시 키프레임이 하나면 위에서 터졌겠지만 혹시 모르니.. 사이즈가 m_iCurrentKeyFrame + 1보다 어쩌구~~ 
-	//나중에 터지면 이 예외처리 잊지말고 하기
 
 	vSourScale = XMLoadFloat3(&m_KeyFrames[m_iCurrentKeyFrame + 1].vScale);
 	vDestScale = XMLoadFloat3(&_CurKeyframe[0].vScale);
@@ -203,9 +151,9 @@ vector<KEYFRAME> CChannel::Get_keyframe()
 	return m_KeyFrames;
 }
 
-CChannel * CChannel::Create(aiNodeAnim * pChannel, CModel* pModel)
+CChannel* CChannel::Create(aiNodeAnim* pChannel, CModel* pModel)
 {
-	CChannel*		pInstance = new CChannel();
+	CChannel* pInstance = new CChannel();
 
 	if (FAILED(pInstance->NativeConstruct(pChannel, pModel)))
 	{

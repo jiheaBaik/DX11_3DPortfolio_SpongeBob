@@ -58,16 +58,8 @@ HRESULT CRing_Top::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-
-		//	m_pShaderCom->Begin(0);
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 0);
 	}
-
 
 	m_pNavigationCom->ToolRender();
 	return S_OK;
@@ -75,23 +67,18 @@ HRESULT CRing_Top::Render()
 
 HRESULT CRing_Top::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Ring_Top"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
-	/* For.Com_Navigation */
 	CNavigation::NAVIDESC		NaviDesc;
 	ZeroMemory(&NaviDesc, sizeof(CNavigation::NAVIDESC));
 	NaviDesc.iCurrentIndex = 0;
-	/* for.Com_Navigation */
 
 	if (FAILED(__super::Add_Component(TEXT("Com_Navigation"), LEVEL_STATIC, TEXT("Prototype_Component_Navigation"), (CComponent**)&m_pNavigationCom, &NaviDesc)))
 		return E_FAIL;

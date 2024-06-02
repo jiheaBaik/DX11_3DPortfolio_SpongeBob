@@ -95,7 +95,7 @@ HRESULT CMeshContainer::NativeConstruct(void * pArg)
 		pNewNode->SetUp_OffsetMatrix(OffsetMatrix);
 
 		HierarchyNodes.push_back(pNewNode);
-		Safe_AddRef(pNewNode);// 추가
+		Safe_AddRef(pNewNode);
 		Safe_Release(pHierarchyNode);
 	}
 
@@ -234,7 +234,7 @@ HRESULT CMeshContainer::SetUp_AnimVertices(aiMesh * pAIMesh, CModel* pModel)
 		if (nullptr != pNode)
 		{
 			m_HierarchyNodes.push_back(pNode);
-			Safe_AddRef(pNode);// 추가
+			Safe_AddRef(pNode);
 			m_iNumBones = 1;
 		}
 

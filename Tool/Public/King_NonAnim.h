@@ -20,15 +20,15 @@ class CKing_NonAnim final : public CGameObject
 	{
 		LEVEL toolLevel;
 		OBJ_CLIENTLEVELE clientLevel;
-		const _tchar * pObj;
-		const _tchar * pLayerTag;
-		const _tchar * pPrototypeTag;
-		const _tchar * pObj_Kind;
+		const _tchar* pObj;
+		const _tchar* pLayerTag;
+		const _tchar* pPrototypeTag;
+		const _tchar* pObj_Kind;
 		_uint iIndex;
 		_uint iNumber;
 		_float3 fPos;
 		_float3 fScale;
-		const _tchar * pTextureInfo;
+		const _tchar* pTextureInfo;
 		_float3 fAxist;
 		_float fRotation;
 
@@ -49,9 +49,9 @@ public:
 
 
 private:
-	CShader*					m_pShaderCom = nullptr;
-	CRenderer*					m_pRendererCom = nullptr;
-	CModel*						m_pVIBufferCom = nullptr;
+	CShader* m_pShaderCom = nullptr;
+	CRenderer* m_pRendererCom = nullptr;
+	CModel* m_pVIBufferCom = nullptr;
 
 private:
 	HRESULT SetUp_Components();
@@ -59,7 +59,7 @@ private:
 
 private:
 	OBJINFODESC m_Info;
-	
+
 	_double m_dTotalTime = 0.1f;
 	_bool m_isChange;
 

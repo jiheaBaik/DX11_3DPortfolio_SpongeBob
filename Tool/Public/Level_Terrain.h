@@ -26,8 +26,6 @@ public:
 private:
 	HRESULT	Ready_Prototype_Component();
 	HRESULT	Ready_Clone_GameObject();
-	/*CCube_Manager* m_pCubeMgrInstance = nullptr;
-	CToolObject_Manager* m_pMonsterMgrInstance = nullptr;*/
 	HRESULT DBConnection();
 private:
 	ID3D11Device*			m_pDevice = nullptr;

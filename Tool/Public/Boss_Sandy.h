@@ -18,15 +18,15 @@ class CBoss_Sandy final : public CGameObject
 	{
 		LEVEL toolLevel;
 		OBJ_CLIENTLEVELE clientLevel;
-		const _tchar * pObj;
-		const _tchar * pLayerTag;
-		const _tchar * pPrototypeTag;
-		const _tchar * pObj_Kind;
+		const _tchar* pObj;
+		const _tchar* pLayerTag;
+		const _tchar* pPrototypeTag;
+		const _tchar* pObj_Kind;
 		_uint iIndex;
 		_uint iNumber;
 		_float3 fPos;
 		_float3 fScale;
-		const _tchar * pTextureInfo;
+		const _tchar* pTextureInfo;
 		_float3 fAxist;
 		_float fRotation;
 
@@ -46,9 +46,9 @@ public:
 	virtual HRESULT  Render() override;
 	void Set_Render(_bool _isRender) { m_isRender = _isRender; }
 private:
-	CShader*					m_pShaderCom = nullptr;
-	CRenderer*					m_pRendererCom = nullptr;
-	CModel*						m_pVIBufferCom = nullptr;
+	CShader* m_pShaderCom = nullptr;
+	CRenderer* m_pRendererCom = nullptr;
+	CModel* m_pVIBufferCom = nullptr;
 
 public:
 	void SetActionIndex(_uint _index) { m_ActionIndex = _index; }

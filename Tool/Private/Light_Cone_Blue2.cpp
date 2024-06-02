@@ -39,28 +39,6 @@ HRESULT CLight_Cone_Blue2::NativeConstruct(void * pArg)
 
 void CLight_Cone_Blue2::Tick(_double TimeDelta)
 {
-
-	//if (m_dTotalTime <= 5.f && !m_isChange)
-	//{
-	//	m_isChange = false;
-	//	m_dTotalTime += 0.01;
-	//	m_fangle = 0.001;
-	//}
-	//else
-	//{
-	//	m_isChange = true;
-	//	m_dTotalTime -= 0.01;
-	//	m_fangle = -0.001;
-	//	if (m_dTotalTime <= 0.0f)
-	//		m_isChange = false;
-	//}
-
-	//
-
-
-	//m_pTransformCom->Rotation(XMLoadFloat3(&_float3(0.f, 0.f, 1.f)), m_fangle);
-
-	
 }
 
 void CLight_Cone_Blue2::LateTick(_double TimeDelta)
@@ -85,60 +63,18 @@ HRESULT CLight_Cone_Blue2::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-
-	/*	ID3D11BlendState * d3dBlendState;
-		D3D11_BLEND_DESC bd;
-		ZeroMemory(&bd, sizeof(D3D11_BLEND_DESC));
-
-		bd.AlphaToCoverageEnable = FALSE;
-		bd.IndependentBlendEnable = FALSE;
-		bd.RenderTarget[0].BlendEnable = TRUE;
-		bd.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
-		bd.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;
-		bd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
-		bd.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE;
-		bd.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO;
-		bd.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
-		bd.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
-
-		if (FAILED(m_pDevice->CreateBlendState(&bd, &d3dBlendState)))
-			return false;
-
-		m_pContext->OMSetBlendState(d3dBlendState, 0, 0xffffffff);*/
-
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 5);
-
-		//Safe_Release(d3dBlendState);
 	}
-
-	//ID3D11BlendState * d3dBlendState;
-	//D3D11_BLEND_DESC bd;
-	//ZeroMemory(&bd, sizeof(D3D11_BLEND_DESC));
-	//bd.RenderTarget[0].BlendEnable = false;
-	//bd.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
-
-	////Safe_AddRef(d3;
-	//if (FAILED(m_pDevice->CreateBlendState(&bd, &d3dBlendState)))
-	//	return false;
-
-	//m_pContext->OMSetBlendState(d3dBlendState, 0, 0xffffffff);
-	//Safe_Release(d3dBlendState);
-
-	return S_OK;
 }
 
 HRESULT CLight_Cone_Blue2::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Light_Cone_Blue2"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 

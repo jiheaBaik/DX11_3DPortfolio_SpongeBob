@@ -2,12 +2,12 @@
 
 #include "GameInstance.h"
 
-CFish_C::CFish_C(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CFish_C::CFish_C(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CGameObject(pDevice, pContext)
 {
 }
 
-CFish_C::CFish_C(const CFish_C & Prototype)
+CFish_C::CFish_C(const CFish_C& Prototype)
 	: CGameObject(Prototype)
 {
 }
@@ -17,7 +17,7 @@ HRESULT CFish_C::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CFish_C::NativeConstruct(void * pArg)
+HRESULT CFish_C::NativeConstruct(void* pArg)
 {
 	CTransform::TRANSFORMDESC		TransformDesc(5.f, XMConvertToRadians(90.0f));
 
@@ -61,17 +61,8 @@ HRESULT CFish_C::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-
-		//	m_pShaderCom->Begin(0);
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 0);
 	}
-
-
 
 	return S_OK;
 }
@@ -81,11 +72,9 @@ HRESULT CFish_C::SetUp_Components()
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxAnimModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_TERRAIN, TEXT("Prototype_Component_Model_Fish_C"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -105,7 +94,7 @@ HRESULT CFish_C::SetUp_ConstantTable()
 	if (nullptr == m_pShaderCom)
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_WorldMatrix", &m_pTransformCom->Get_WorldFloat4x4_TP(), sizeof(_float4x4))))
 		return E_FAIL;
@@ -115,8 +104,6 @@ HRESULT CFish_C::SetUp_ConstantTable()
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_ProjMatrix", &pGameInstance->Get_Transformfloat4x4_TP(CPipeLine::D3DTS_PROJ), sizeof(_float4x4))))
 		return E_FAIL;
-
-
 
 
 	const LIGHTDESC* pLightDesc = pGameInstance->Get_LightDesc();
@@ -159,9 +146,9 @@ HRESULT CFish_C::SetUp_ConstantTable()
 	return S_OK;
 }
 
-CFish_C * CFish_C::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CFish_C* CFish_C::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 {
-	CFish_C*		pInstance = new CFish_C(pDevice, pContext);
+	CFish_C* pInstance = new CFish_C(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
@@ -171,9 +158,9 @@ CFish_C * CFish_C::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext
 	return pInstance;
 }
 
-CGameObject * CFish_C::Clone(void * pArg)
+CGameObject* CFish_C::Clone(void* pArg)
 {
-	CFish_C*		pInstance = new CFish_C(*this);
+	CFish_C* pInstance = new CFish_C(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{

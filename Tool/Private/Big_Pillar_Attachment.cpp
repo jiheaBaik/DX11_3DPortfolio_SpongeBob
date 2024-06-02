@@ -6,12 +6,12 @@
 
 #include "GameInstance.h"
 
-CBig_Pillar_Attachment::CBig_Pillar_Attachment(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CBig_Pillar_Attachment::CBig_Pillar_Attachment(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CGameObject(pDevice, pContext)
 {
 }
 
-CBig_Pillar_Attachment::CBig_Pillar_Attachment(const CBig_Pillar_Attachment & Prototype)
+CBig_Pillar_Attachment::CBig_Pillar_Attachment(const CBig_Pillar_Attachment& Prototype)
 	: CGameObject(Prototype)
 {
 }
@@ -21,7 +21,7 @@ HRESULT CBig_Pillar_Attachment::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CBig_Pillar_Attachment::NativeConstruct(void * pArg)
+HRESULT CBig_Pillar_Attachment::NativeConstruct(void* pArg)
 {
 	CTransform::TRANSFORMDESC		TransformDesc(5.f, XMConvertToRadians(90.0f));
 
@@ -63,32 +63,20 @@ HRESULT CBig_Pillar_Attachment::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-		//if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-		//	return E_FAIL;
-
-		//	m_pShaderCom->Begin(0);
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 0);
 	}
-
-
 
 	return S_OK;
 }
 
 HRESULT CBig_Pillar_Attachment::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Big_Pillar_Attachment"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -108,7 +96,7 @@ HRESULT CBig_Pillar_Attachment::SetUp_ConstantTable()
 	if (nullptr == m_pShaderCom)
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_WorldMatrix", &m_pTransformCom->Get_WorldFloat4x4_TP(), sizeof(_float4x4))))
 		return E_FAIL;
@@ -125,9 +113,9 @@ HRESULT CBig_Pillar_Attachment::SetUp_ConstantTable()
 	return S_OK;
 }
 
-CBig_Pillar_Attachment * CBig_Pillar_Attachment::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CBig_Pillar_Attachment* CBig_Pillar_Attachment::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 {
-	CBig_Pillar_Attachment*		pInstance = new CBig_Pillar_Attachment(pDevice, pContext);
+	CBig_Pillar_Attachment* pInstance = new CBig_Pillar_Attachment(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
@@ -137,9 +125,9 @@ CBig_Pillar_Attachment * CBig_Pillar_Attachment::Create(ID3D11Device * pDevice, 
 	return pInstance;
 }
 
-CGameObject * CBig_Pillar_Attachment::Clone(void * pArg)
+CGameObject* CBig_Pillar_Attachment::Clone(void* pArg)
 {
-	CBig_Pillar_Attachment*		pInstance = new CBig_Pillar_Attachment(*this);
+	CBig_Pillar_Attachment* pInstance = new CBig_Pillar_Attachment(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{

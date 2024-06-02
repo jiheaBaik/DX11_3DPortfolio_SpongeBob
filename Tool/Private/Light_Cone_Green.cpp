@@ -2,12 +2,12 @@
 
 #include "GameInstance.h"
 
-CLight_Cone_Green::CLight_Cone_Green(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CLight_Cone_Green::CLight_Cone_Green(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CGameObject(pDevice, pContext)
 {
 }
 
-CLight_Cone_Green::CLight_Cone_Green(const CLight_Cone_Green & Prototype)
+CLight_Cone_Green::CLight_Cone_Green(const CLight_Cone_Green& Prototype)
 	: CGameObject(Prototype)
 {
 }
@@ -17,7 +17,7 @@ HRESULT CLight_Cone_Green::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CLight_Cone_Green::NativeConstruct(void * pArg)
+HRESULT CLight_Cone_Green::NativeConstruct(void* pArg)
 {
 	CTransform::TRANSFORMDESC		TransformDesc(5.f, XMConvertToRadians(90.0f));
 
@@ -50,7 +50,7 @@ void CLight_Cone_Green::Tick(_double TimeDelta)
 			m_isChange = false;
 	}
 
-	
+
 
 
 	m_pTransformCom->Rotation(XMLoadFloat3(&_float3(0.f, 0.f, 1.f)), m_fangle);
@@ -79,60 +79,19 @@ HRESULT CLight_Cone_Green::Render()
 	{
 		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
 			return E_FAIL;
-
-		/*ID3D11BlendState * d3dBlendState;
-		D3D11_BLEND_DESC bd;
-		ZeroMemory(&bd, sizeof(D3D11_BLEND_DESC));
-
-		bd.AlphaToCoverageEnable = FALSE;
-		bd.IndependentBlendEnable = FALSE;
-		bd.RenderTarget[0].BlendEnable = TRUE;
-		bd.RenderTarget[0].SrcBlend = D3D11_BLEND_SRC_ALPHA;
-		bd.RenderTarget[0].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;
-		bd.RenderTarget[0].BlendOp = D3D11_BLEND_OP_ADD;
-		bd.RenderTarget[0].SrcBlendAlpha = D3D11_BLEND_ONE;
-		bd.RenderTarget[0].DestBlendAlpha = D3D11_BLEND_ZERO;
-		bd.RenderTarget[0].BlendOpAlpha = D3D11_BLEND_OP_ADD;
-		bd.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
-
-		if (FAILED(m_pDevice->CreateBlendState(&bd, &d3dBlendState)))
-			return false;
-
-		m_pContext->OMSetBlendState(d3dBlendState, 0, 0xffffffff);*/
-
-
 		m_pVIBufferCom->Render(i, m_pShaderCom, 5);
-
-		//Safe_Release(d3dBlendState);
 	}
-
-	//ID3D11BlendState * d3dBlendState;
-	//D3D11_BLEND_DESC bd;
-	//ZeroMemory(&bd, sizeof(D3D11_BLEND_DESC));
-	//bd.RenderTarget[0].BlendEnable = false;
-	//bd.RenderTarget[0].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
-
-	////Safe_AddRef(d3;
-	//if (FAILED(m_pDevice->CreateBlendState(&bd, &d3dBlendState)))
-	//	return false;
-
-	//m_pContext->OMSetBlendState(d3dBlendState, 0, 0xffffffff);
-	//Safe_Release(d3dBlendState);
-
 	return S_OK;
 }
 
 HRESULT CLight_Cone_Green::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Light_Cone_Green"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -152,7 +111,7 @@ HRESULT CLight_Cone_Green::SetUp_ConstantTable()
 	if (nullptr == m_pShaderCom)
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_WorldMatrix", &m_pTransformCom->Get_WorldFloat4x4_TP(), sizeof(_float4x4))))
 		return E_FAIL;
@@ -169,9 +128,9 @@ HRESULT CLight_Cone_Green::SetUp_ConstantTable()
 	return S_OK;
 }
 
-CLight_Cone_Green * CLight_Cone_Green::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CLight_Cone_Green* CLight_Cone_Green::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 {
-	CLight_Cone_Green*		pInstance = new CLight_Cone_Green(pDevice, pContext);
+	CLight_Cone_Green* pInstance = new CLight_Cone_Green(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
@@ -181,9 +140,9 @@ CLight_Cone_Green * CLight_Cone_Green::Create(ID3D11Device * pDevice, ID3D11Devi
 	return pInstance;
 }
 
-CGameObject * CLight_Cone_Green::Clone(void * pArg)
+CGameObject* CLight_Cone_Green::Clone(void* pArg)
 {
-	CLight_Cone_Green*		pInstance = new CLight_Cone_Green(*this);
+	CLight_Cone_Green* pInstance = new CLight_Cone_Green(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{

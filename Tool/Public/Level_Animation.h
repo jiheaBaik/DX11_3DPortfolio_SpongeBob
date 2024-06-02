@@ -76,8 +76,6 @@ public:
 private:
 	HRESULT	Ready_Prototype_Component();
 	HRESULT	Ready_Clone_GameObject();
-	/*CCube_Manager* m_pCubeMgrInstance = nullptr;
-	CToolObject_Manager* m_pMonsterMgrInstance = nullptr;*/
 	HRESULT DBConnection();
 	HRESULT SelectMesh();
 	void State_Info(_int _sateInfo);
@@ -99,10 +97,6 @@ private:
 
 	vector<_uint> m_vPatternList;
 
-
-
-
-	//ACTIONINFODESC m_AnimationInfo;
 public:
 	HRESULT SelectTable();
 public:

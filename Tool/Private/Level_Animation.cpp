@@ -12,11 +12,6 @@
 #include <comdef.h>
 #include <algorithm>
 
-//static _bool CLevel_Animation::compare(const ACTIONINFODESC & a, const ACTIONINFODESC & b)
-//{
-//	
-//}
-
 CLevel_Animation::CLevel_Animation(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
 	: CLevel(pDevice, pContext), m_pDevice(pDevice), m_pContext(pContext)
 {
@@ -24,14 +19,8 @@ CLevel_Animation::CLevel_Animation(ID3D11Device * pDevice, ID3D11DeviceContext *
 
 HRESULT CLevel_Animation::NativeConstruct()
 {
-//	m_sTable = "Level_Boss1_UI";
-	//DBConnection();
-
-	//m_pTerrainMgrInstance = CTerrainManager::Create(m_pDevice, m_pContext, db);
-
 	if (FAILED(__super::NativeConstruct()))
 		return E_FAIL;
-	//m_pTerrainMgrInstance->NativeConstruct();
 
 	if (FAILED(Ready_Prototype_Component()))
 		return E_FAIL;
@@ -54,15 +43,6 @@ void CLevel_Animation::LateTick(_float fTimeDelta)
 
 HRESULT CLevel_Animation::Render()
 {
-	/*if (ImGui::Begin("Data Management"))
-	{
-		if (m_IsConnection)
-			ImGui::TextColored(ImVec4(0.0f, 1.0f, 1.0f, 1.0f), "DB Connection : Completed");
-		else
-			ImGui::TextColored(ImVec4(0.0f, 1.0f, 1.0f, 1.0f), "DB Connection : Failed");
-
-	}
-	ImGui::End();*/
 
 	if (ImGui::Begin("Level_Navigation MousePos"))
 	{
@@ -72,8 +52,6 @@ HRESULT CLevel_Animation::Render()
 		ImGui::Text("MainViewMousePos_y : %1.f", screenMousePos.y - mainViewPos.y - 24);
 	}
 	ImGui::End();
-
-	//SelectTable();
 
 	SelectMesh();
 
@@ -366,23 +344,15 @@ HRESULT CLevel_Animation::SelectMesh()
 
 	if(ImGui::Begin("Set_Pattern"))
 	{
-		//static _bool bIsSet_Pattern = false;
 		static _int PatternNum = 0;
 		static _int patternList = 0;
 		static _uint SelectpatternList = 0;
 
-		//ImGui::Checkbox("Set_Pattern", &bIsSet_Pattern);
-
-		//if (bIsSet_Pattern)
-		//{
 			if (ImGui::Button("Select Motion"))
 			{
-				//ImGui::InputInt("Pattern Num", &NumberPick);
 				m_vPatternList.push_back((SANDY_ACTION)NumberPick);
 
 				patternList++;
-			//	State_Info(NumberPick);
-
 				m_vPatternNameList.push_back(to_string(NumberPick));
 
 
@@ -397,7 +367,6 @@ HRESULT CLevel_Animation::SelectMesh()
 				}
 			}
 			ImGui::EndListBox();
-		//}
 
 			if (ImGui::Button("Delete"))
 			{
@@ -409,7 +378,6 @@ HRESULT CLevel_Animation::SelectMesh()
 			ImGui::SameLine();
 			if (ImGui::Button("Insert"))
 			{
-				//v.insert(v.begin() + 2, 3);
 				m_vPatternNameList.insert(m_vPatternNameList.begin() + SelectpatternList, to_string(NumberPick) );
 				m_vPatternList.insert(m_vPatternList.begin() + SelectpatternList, (SANDY_ACTION)NumberPick);
 				patternList++;
@@ -694,65 +662,6 @@ HRESULT CLevel_Animation::SelectMesh()
 	
 HRESULT CLevel_Animation::SelectTable()
 {
-	//static _int m_Table = 0;
-
-	//if (ImGui::Begin("Data Management"))
-	//{
-	//	int rc = 0;
-	//	char *err_msg = 0;
-	//	sqlite3_stmt *res = nullptr;
-
-	//	static vector<string> m_vecTableListTemp;
-
-	//	static _int m_TableCount = 0;
-	//	static _bool isEnd = false;
-
-
-	//	if (!isEnd)
-	//	{
-	//		const char* sql = "SELECT name FROM sqlite_master WHERE type IN ('table', 'view') AND name NOT LIKE 'sqlite_%' UNION ALL SELECT name FROM sqlite_temp_master WHERE type IN ('table', 'view') ORDER BY 1";
-	//		rc = sqlite3_prepare_v2(db, sql, -1, &res, NULL);
-
-	//		while (sqlite3_step(res) == SQLITE_ROW)
-	//		{
-	//			string pTableName = (char*)sqlite3_column_text(res, 0);
-	//			m_vecTableListTemp.push_back(pTableName);
-	//		}
-	//		isEnd = true;
-	//	}
-
-	//	ImGui::Separator();
-	//	ImGui::TextColored(ImVec4(1.0f, 0.0f, 1.0f, 1.0f), "Select Table");
-	//	if (ImGui::BeginListBox("Table List", ImVec2(-FLT_MIN, 4 * ImGui::GetTextLineHeightWithSpacing())))
-	//	{
-	//		for (int i = 0; i < m_vecTableListTemp.size(); i++)
-	//		{
-	//			const bool is_selected = (m_TableCount == i);
-	//			if (ImGui::Selectable(m_vecTableListTemp[i].c_str(), is_selected))
-	//				m_TableCount = i;
-	//		}
-	//	}
-	//	ImGui::EndListBox();
-
-	//	if (ImGui::Button("Select", ImVec2(70, 25)))
-	//	{
-
-	//		if (m_vecTableListTemp.size() == 0)
-	//			m_vecTableListTemp.push_back("Level_Boss1_Navigation");
-
-	//		m_sTable = m_vecTableListTemp[m_TableCount];
-
-	//		string sqlTemp = "create table if not exists " + m_sTable + "(ToolLevel integer, ClientLevel integer, Obj text, LayerTag text, PrototypeTag text, Index_Num integer,Number integer,\
-	//			 Pos_x integer, Pos_y integer, Pos_z integer, Scale_x integer, Scale_y integer, Scale_z integer, Col_Pos_x, Col_Pos_y, Col_Pos_z, Col_Scale_x, Col_Scale_y,Col_Scale_z,\
-	//			 TextureInfo text, pObj_Kind text, RotationAxist_x integer, RotationAxist_y integer, RotationAxist_z integer, Angle integer)";//일단 프라이머리키 없애고하기
-	//		const char* sql = sqlTemp.c_str();
-
-	//		rc = sqlite3_exec(db, sql, 0, 0, &err_msg);
-	//	}
-	//	ImGui::SameLine();
-	//}
-	//ImGui::End();
-
 	return S_OK;
 }
 
@@ -772,5 +681,4 @@ CLevel_Animation * CLevel_Animation::Create(ID3D11Device * pDevice, ID3D11Device
 void CLevel_Animation::Free()
 {
 	__super::Free();
-	//sqlite3_close(db);
 }

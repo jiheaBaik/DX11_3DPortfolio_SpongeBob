@@ -3,12 +3,12 @@
 
 #include "GameInstance.h"
 
-CPatrick_NonAnim::CPatrick_NonAnim(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CPatrick_NonAnim::CPatrick_NonAnim(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 	: CGameObject(pDevice, pContext)
 {
 }
 
-CPatrick_NonAnim::CPatrick_NonAnim(const CPatrick_NonAnim & Prototype)
+CPatrick_NonAnim::CPatrick_NonAnim(const CPatrick_NonAnim& Prototype)
 	: CGameObject(Prototype)
 {
 }
@@ -18,7 +18,7 @@ HRESULT CPatrick_NonAnim::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CPatrick_NonAnim::NativeConstruct(void * pArg)
+HRESULT CPatrick_NonAnim::NativeConstruct(void* pArg)
 {
 	CTransform::TRANSFORMDESC		TransformDesc(5.f, XMConvertToRadians(90.0f));
 
@@ -59,32 +59,29 @@ HRESULT CPatrick_NonAnim::Render()
 	for (_uint i = 0; i < iNumMeshContainers; ++i)
 	{
 
-	
-			if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
-				return E_FAIL;
 
-			
+		if (FAILED(m_pVIBufferCom->Bind_SRV(m_pShaderCom, "g_DiffuseTexture", i, aiTextureType_DIFFUSE)))
+			return E_FAIL;
 
-			m_pVIBufferCom->Render(i, m_pShaderCom, 0);
-		
+
+
+		m_pVIBufferCom->Render(i, m_pShaderCom, 0);
+
 	}
-	
-	
+
+
 
 	return S_OK;
 }
 
 HRESULT CPatrick_NonAnim::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxModel"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_Model_Patrick_NonAnim"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 
@@ -104,7 +101,7 @@ HRESULT CPatrick_NonAnim::SetUp_ConstantTable()
 	if (nullptr == m_pShaderCom)
 		return E_FAIL;
 
-	CGameInstance*		pGameInstance = GET_INSTANCE(CGameInstance);
+	CGameInstance* pGameInstance = GET_INSTANCE(CGameInstance);
 
 	if (FAILED(m_pShaderCom->Set_RawValue("g_WorldMatrix", &m_pTransformCom->Get_WorldFloat4x4_TP(), sizeof(_float4x4))))
 		return E_FAIL;
@@ -121,9 +118,9 @@ HRESULT CPatrick_NonAnim::SetUp_ConstantTable()
 	return S_OK;
 }
 
-CPatrick_NonAnim * CPatrick_NonAnim::Create(ID3D11Device * pDevice, ID3D11DeviceContext * pContext)
+CPatrick_NonAnim* CPatrick_NonAnim::Create(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
 {
-	CPatrick_NonAnim*		pInstance = new CPatrick_NonAnim(pDevice, pContext);
+	CPatrick_NonAnim* pInstance = new CPatrick_NonAnim(pDevice, pContext);
 
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
@@ -133,9 +130,9 @@ CPatrick_NonAnim * CPatrick_NonAnim::Create(ID3D11Device * pDevice, ID3D11Device
 	return pInstance;
 }
 
-CGameObject * CPatrick_NonAnim::Clone(void * pArg)
+CGameObject* CPatrick_NonAnim::Clone(void* pArg)
 {
-	CPatrick_NonAnim*		pInstance = new CPatrick_NonAnim(*this);
+	CPatrick_NonAnim* pInstance = new CPatrick_NonAnim(*this);
 
 	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{

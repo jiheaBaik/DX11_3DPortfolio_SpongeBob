@@ -26,7 +26,6 @@ HRESULT CCustomFont::Render(const _tchar* pString, const _float2& vPosition, _fv
 	m_pContext->GSSetShader(nullptr, nullptr, 0);
 
 	m_pSpriteBatch->Begin();
-	//XMFLOAT2 const& origin = Float2Zero, float scale = 1;
 	XMFLOAT2 test = XMFLOAT2(0, 0);
 	m_pSpriteFont->DrawString(m_pSpriteBatch, pString, vPosition, vColor, 0, XMFLOAT2(0,0), scale);
 

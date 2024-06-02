@@ -3,8 +3,6 @@
 #include "string.h"
 #include<iostream>
 #include <sstream>
-
-//#include "CppSQLite3U.h"
 #include <tchar.h>
 #include <comdef.h> 
 #include "Cube.h"
@@ -557,23 +555,9 @@ void CTerrainManager::ChangeObjInfo()
 				objInfo.pLayerTag = TEXT("Layer_Tree");
 				objInfo.pPrototypeTag = TEXT("Prototype_GameObject_Tree");
 				break;
-				/*case MESH_SM_PD_SM_LIGHT_CONE_02:
-				objInfo.toolLevel = LEVEL_TERRAIN;
-				objInfo.clientLevel = (OBJ_CLIENTLEVELE)m_ClientLevel;
-				objInfo.pObj = TEXT("CSM_Light_Cone_02");
-				objInfo.pObj_Kind = TEXT("Mesh");
-				objInfo.pLayerTag = TEXT("Layer_CSM_Light_Cone_02");
-				objInfo.pPrototypeTag = TEXT("Prototype_GameObject_CSM_Light_Cone_02");
-				break;*/
-
 			}
-			/*objInfo.toolLevel = LEVEL_TERRAIN;
-			objInfo.clientLevel = (OBJ_CLIENTLEVELE)m_ClientLevel;
-			objInfo.pObj = TEXT("SpongeBob");
-			objInfo.pLayerTag = TEXT("Layer_SpongeBob");
-			objInfo.pPrototypeTag = TEXT("Prototype_GameObject_SpongeBob");*/
 		}
-		if (/*m_IsLoad && */m_bIsSelect)
+		if (m_bIsSelect)
 		{
 			m_vecStrListTemp = ChangeListInfo(objInfo.pObj);
 			m_bIsSelect = false;
@@ -620,12 +604,10 @@ HRESULT CTerrainManager::Delete()
 
 		Safe_AddRef(pGameInstance);
 
-		//Delete
 		if (ImGui::Button("Delete"))
 		{
 			m_bIsSelect = true;
 			CurruntCheck();
-			//삭제하면 -1씩 되므로 인덱스로 하기
 			if (FAILED(pGameInstance->Distroy_GameObject(LEVEL_TERRAIN, objInfo.pLayerTag, false, objInfo.iIndex)))
 				MSG_BOX("Failed Distroy");
 	
@@ -637,7 +619,6 @@ HRESULT CTerrainManager::Delete()
 					{
 						for (int i = 0; i < 3; i++)
 							m_vNavigation.pop_back();
-						//Cell 지우기
 						m_pObjNavigation->Set_CellsPop();
 					}
 					else
@@ -654,10 +635,9 @@ HRESULT CTerrainManager::Delete()
 			int rc;
 			char *err_msg = 0;
 			sqlite3_stmt *res2;
-			//quotesql()
 
 			string sqlTemp = "DELETE FROM " + m_sTable + " where Obj = @_objkind and Index_Num = @_Number";
-			const char* sql2 = "";/* = sqlTemp.c_str();*/
+			const char* sql2 = "";
 
 			if (m_iObj_current > -1)
 				sql2 = sqlTemp.c_str();
@@ -1030,12 +1010,6 @@ void CTerrainManager::ClickCount(_bool _isCreate)
 			objInfo.iIndex = m_Obj_ClickCount.Tree;
 			m_Obj_ClickCount.Tree++;
 		}
-		/*else if (objInfo.pObj == L"CSM_Light_Cone_02")
-		{
-		objInfo.iNumber = m_Obj_ClickCount.CSM_Light_Cone_02;
-		objInfo.iIndex = m_Obj_ClickCount.CSM_Light_Cone_02;
-		m_Obj_ClickCount.CSM_Light_Cone_02++;
-		}*/
 	}
 	else
 	{
@@ -1364,12 +1338,6 @@ void CTerrainManager::ClickCount(_bool _isCreate)
 			if (m_Obj_ClickCount.Tree > 0)
 				m_Obj_ClickCount.Tree--;
 		}
-		/*	else if (objInfo.pObj == L"CSM_Light_Cone_02")
-		{
-		objInfo.iNumber = m_Obj_ClickCount.CSM_Light_Cone_02;
-		if (m_Obj_ClickCount.CSM_Light_Cone_02 > 0)
-		m_Obj_ClickCount.CSM_Light_Cone_02--;
-		}*/
 	}
 }
 
@@ -1380,7 +1348,6 @@ HRESULT CTerrainManager::Picking()
 		return E_FAIL;
 	Safe_AddRef(pGameInstance);
 
-	//Terrain Picking
 	if (GetAsyncKeyState('C') & 0x0001)
 	{
 		_float3 vtrColPostest;
@@ -1395,32 +1362,10 @@ HRESULT CTerrainManager::Picking()
 
 	if (GetAsyncKeyState('P') & 0x0001)
 	{
-		/*	int rc;
-		char *err_msg = 0;
-		sqlite3_stmt *res;
-
-		string sqlTemp = "select Index_Num from " + m_sTable + " where LayerTag = @objkind and  Number = @Num";
-		const char* sql = sqlTemp.c_str();
-		rc = sqlite3_prepare_v2(m_db, sql, -1, &res, 0);
-
-		int index = sqlite3_bind_parameter_index(res, "@objkind");
-		_bstr_t temp1(bstrLayerTag);
-		const char* pObj = temp1;
-		sqlite3_bind_text(res, index, pObj, -1, SQLITE_TRANSIENT);
-		index = sqlite3_bind_parameter_index(res, "@Num");
-		sqlite3_bind_int(res, index, iCount);
-
-		if (sqlite3_step(res) == SQLITE_ROW)
-		m_iObj_current = sqlite3_column_int(res, 0);
-		else
-		MSG_BOX("not found");
-		*/// <<- 사실 이게 맞음 인덱스랑 넘버랑 차이가 원래 있어서 넘버는 삭제해도 계속 남아있는 카운트임. 엔진에선 그 숫자로 활용. 하지만 ppt짧게하려고 ..
 		int iRc = 0;
 		char *err_msg = 0;
 		sqlite3_stmt *res = nullptr;
-		//objInfo.pLayerTag
 		_float3 vtrGetPos = {};
-		//콤보박스이름의 레이어테그를 따와 검색
 		string sqlResult = "select * from " + m_sTable + " where LayerTag = @objLayer";
 		const char* pSql = sqlResult.c_str();
 		iRc = sqlite3_prepare_v2(m_db, pSql, -1, &res, NULL);
@@ -1441,7 +1386,6 @@ HRESULT CTerrainManager::Picking()
 			CTransform* m_pObjTransform = (CTransform*)pGameInstance->Get_Component(LEVEL_TERRAIN, bstrLayerTag, TEXT("Com_Transform"), iIndex);
 			if (nullptr == m_pObjTransform)
 				return E_FAIL;
-			//메쉬컨테이너에서  가져오는거라 큐브나 애니메이션은 불가 나중에 예외처리하기.
 			if (pGameInstance->Picking(m_pObjTransform, (CVIBuffer*)m_pObjnVeffer->GetMeshContainers().front(), &vtrGetPos)){
 				m_iObj_current = iIndex;
 				break;
@@ -1451,10 +1395,6 @@ HRESULT CTerrainManager::Picking()
 
 	}
 
-	
-
-
-	//Cube Picking
 	if (GetAsyncKeyState('E') & 0x0001)
 	{
 		_float3 vtrColPos;
@@ -1464,7 +1404,6 @@ HRESULT CTerrainManager::Picking()
 
 		for (int i = 0; i < m_Obj_ClickCount.Cube; i++)
 		{
-
 			m_pObjCubeVeffer = (CVIBuffer*)pGameInstance->Get_Component(LEVEL_TERRAIN, L"Layer_Cube", TEXT("Com_VIBuffer"), i);
 			m_pObjCubeTransform = (CTransform*)pGameInstance->Get_Component(LEVEL_TERRAIN, L"Layer_Cube", TEXT("Com_Transform"), i);
 			if (pGameInstance->Picking(m_pObjCubeTransform, m_pObjCubeVeffer, &vtrColPos))
@@ -1476,7 +1415,6 @@ HRESULT CTerrainManager::Picking()
 				XMStoreFloat3(&tempPos, Pos);
 				m_vNavigation.push_back(tempPos);
 
-
 				ImGui::Text("Ok");
 			}
 		}
@@ -1484,17 +1422,10 @@ HRESULT CTerrainManager::Picking()
 
 	if (ImGui::Begin("Navigation"))
 	{
-		//	static _bool isNavigation = false;
 		ImGui::Checkbox("Navigation", &isNavigation);
 
 		if (ImGui::Button("save"))
 		{
-			/*_ulong		dwByte = 0;
-
-			HANDLE		hFile = CreateFile(TEXT("../../Client/Bin/Data/Navigation.dat"), GENERIC_WRITE, 0, nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, 0);
-*/
-
-
 
 			_ulong		dwByte = 0;
 			HANDLE		hFile = nullptr;
@@ -1505,9 +1436,6 @@ HRESULT CTerrainManager::Picking()
 			if (0 == hFile)
 				return E_FAIL;
 			_float3			vPoints[3];
-			//ZeroMemory(vPoints, sizeof(_float3));
-
-		//	_uint iIndex;
 			for (int i = 0; i < m_vNavigation.size(); i += 3)
 			{
 
@@ -1521,7 +1449,6 @@ HRESULT CTerrainManager::Picking()
 
 			CloseHandle(hFile);
 		}
-
 
 	}
 	ImGui::End();
@@ -1543,18 +1470,7 @@ void CTerrainManager::CCWCheck(_float3 _MeshPos)
 		m_vNavigation[m_vNavigation.size() - 2] = _temp;
 	}
 
-
 }
-
-//static int callback(void *NotUsed, int argc, char **argv, char **azColName)
-//{
-//	int i;
-//	for (i = 0; i < argc; i++) {
-//		printf("%s = %sn", azColName[i], argv[i] ? argv[i] : "NULL");
-//	}
-//	printf("n");
-//	return 0;
-//}
 
 HRESULT CTerrainManager::DBConnection()
 {
@@ -1780,7 +1696,6 @@ HRESULT CTerrainManager::EditObj()
 
 
 			ImGui::Separator();
-			//End Edit
 			if (ImGui::Button("OK", ImVec2(338, 30)))
 			{
 				m_ApplyRotation = false;
@@ -1852,7 +1767,6 @@ HRESULT CTerrainManager::EditObj()
 		ImGui::End();
 	}
 
-	//TerrainControl
 	if (ImGui::Begin("TerrainControl"))
 	{
 		static _float3 m_fCntlPos = _float3(0.f, 0.f, 0.f);
@@ -2027,26 +1941,6 @@ HRESULT CTerrainManager::Load()
 
 				char			temp[MAX_PATH] = "";
 				strcpy_s(temp, (char*)sqlite3_column_text(res3, 2));
-				//TCHAR temp_tchar[256] = { 0, };
-				/*	temp_tchar = new TCHAR[256]
-				string str = (string)temp_char;
-				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, temp_char, strlen(temp_char), temp_tchar, 256);
-				objInfo.pObj = temp_tchar;
-
-				TCHAR temp_tchar2[256] = { 0, };
-				strcpy_s(temp_char, (char*)sqlite3_column_text(res3, 3));
-				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, temp_char, strlen(temp_char), temp_tchar2, 256);
-				objInfo.pLayerTag = temp_tchar2;
-
-				TCHAR temp_tchar3[256] = { 0, };
-				strcpy_s(temp_char, (char*)sqlite3_column_text(res3, 4));
-				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, temp_char, strlen(temp_char), temp_tchar3, 256);
-				objInfo.pPrototypeTag = temp_tchar3;
-
-				TCHAR temp_tchar4[256] = { 0, };
-				strcpy_s(temp_char, (char*)sqlite3_column_text(res3, 20));
-				MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, temp_char, strlen(temp_char), temp_tchar4, 256);
-				objInfo.pObj_Kind = temp_tchar4;*/
 
 				if (strcmp(temp, "Cube") == 0)
 				{
@@ -2259,83 +2153,6 @@ HRESULT CTerrainManager::Load()
 					objInfo.pLayerTag = L"Layer_Tree";
 					objInfo.pPrototypeTag = L"Prototype_GameObject_Tree";
 				}
-				/*else if (strcmp(temp, "Fish_A") == 0)
-				{
-				objInfo.pObj = L"Fish_A";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_A";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_A";
-				}
-				else if (strcmp(temp, "Fish_B") == 0)
-				{
-				objInfo.pObj = L"Fish_B";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_B";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_B";
-				}
-				else if (strcmp(temp, "Fish_C") == 0)
-				{
-				objInfo.pObj = L"Fish_C";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_C";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_C";
-				}
-				else if (strcmp(temp, "Fish_D") == 0)
-				{
-				objInfo.pObj = L"Fish_D";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_D";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_D";
-				}
-				else if (strcmp(temp, "Fish_E") == 0)
-				{
-				objInfo.pObj = L"Fish_E";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_E";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_E";
-				}
-				else if (strcmp(temp, "Fish_G") == 0)
-				{
-				objInfo.pObj = L"Fish_G";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_G";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_G";
-				}
-				else if (strcmp(temp, "Fish_H") == 0)
-				{
-				objInfo.pObj = L"Fish_H";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_H";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_H";
-				}
-				else if (strcmp(temp, "Fish_I") == 0)
-				{
-				objInfo.pObj = L"Fish_I";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_I";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_I";
-				}
-				else if (strcmp(temp, "Fish_J") == 0)
-				{
-				objInfo.pObj = L"Fish_J";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_J";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_J";
-				}
-				else if (strcmp(temp, "Fish_K") == 0)
-				{
-				objInfo.pObj = L"Fish_K";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_K";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_K";
-				}
-				else if (strcmp(temp, "Fish_L") == 0)
-				{
-				objInfo.pObj = L"Fish_L";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_Fish_L";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_Fish_L";
-				}*/
 				else if (strcmp(temp, "Scoreboard_Ropes") == 0)
 				{
 					objInfo.pObj = L"Scoreboard_Ropes";
@@ -2429,13 +2246,6 @@ HRESULT CTerrainManager::Load()
 				}
 				else
 					continue;
-				/*	else if (strcmp(temp, "CSM_Light_Cone_02") == 0)
-				{
-				objInfo.pObj = L"CSM_Light_Cone_02";
-				objInfo.pObj_Kind = L"Mesh";
-				objInfo.pLayerTag = L"Layer_CSM_Light_Cone_02";
-				objInfo.pPrototypeTag = L"Prototype_GameObject_SM_Light_Cone_02";
-				}*/
 
 				char * temp1 = (char*)sqlite3_column_text(res3, 4);
 				MultiByteToWideChar(CP_ACP, 0, temp1, strlen(temp1) + 1, pTextureInfo, 256);
@@ -2454,17 +2264,14 @@ HRESULT CTerrainManager::Load()
 				str.append(string_temp, 0, string_temp.size());
 				std::wstring widestr = std::wstring(str.begin(), str.end());
 				const wchar_t* widecstr = widestr.c_str();
-				//objInfo.pName = widecstr;
 				m_vecStrListTemp.push_back(str);
 			}
-			//다음번째  넘버링 +1
 			if (rc != SQLITE_OK)
 			{
 				MSG_BOX("SQL error");
 				return E_FAIL;
 			}
 
-			//NavigationMesh
 			_ulong		dwByte = 0;
 			HANDLE		hFile = nullptr;
 			if (m_sTable == "Level_Boss1_Map")
@@ -2474,8 +2281,6 @@ HRESULT CTerrainManager::Load()
 
 			if (0 == hFile)
 				return E_FAIL;
-			//..? 뭐지 이거하면 왜 누수 날까
-			//ZeroMemory(&m_vNavigation, sizeof(vector<_float3>));
 
 			while (true)
 			{
@@ -2582,11 +2387,8 @@ HRESULT CTerrainManager::Create()
 					if (pGameInstance->Picking(m_pObjTransform, (CVIBuffer*)m_pObjnVeffer->GetMeshContainers().front(), &vtrColPostest))
 					{
 						_float3 vMeshPos = vtrColPostest;
-						//vMeshPos.y = 0.f;
-						//cube 위치를 터레인이 아닌 메쉬위치로		m_Animations[m_iCurrentAnimIndex]->Get_Finish()		m_Animations[m_iCurrentAnimIndex]->Get_Finish()	false	bool	인식할 수 없는 토큰입니다.	
 
 						objInfo.fPos = _float3(vMeshPos.x, vMeshPos.y, vMeshPos.z);
-
 
 						if (m_vNavigation.size() > 3)
 							CCWCheck(vMeshPos);
@@ -2597,7 +2399,7 @@ HRESULT CTerrainManager::Create()
 						m_pObjNavigation = (CNavigation*)pGameInstance->Get_Component(LEVEL_TERRAIN, temp_tchar, TEXT("Com_Navigation"), Number);
 						if (nullptr == m_pObjTransform)
 							return E_FAIL;
-						//Cells추가
+
 						if (m_vNavigation.size() % 3 == 0)
 						{
 							_float3		vPoints[3];
@@ -2692,7 +2494,6 @@ HRESULT CTerrainManager::Create()
 			if (isNavigation)
 			{
 				CCube* pCube = nullptr;
-				//zkd
 				for (int i = 0; i < m_Obj_ClickCount.Cube; i++)
 				{
 					pCube = static_cast<CCube*>(pGameInstance->Get_GameObject(LEVEL_TERRAIN, TEXT("Layer_Cube"), i));
@@ -2734,9 +2535,6 @@ CTerrainManager * CTerrainManager::Create(ID3D11Device * pDevice, ID3D11DeviceCo
 
 void CTerrainManager::Free()
 {
-
-
 	__super::Free();
 	sqlite3_close(m_db);
-	//Safe_Release(m_pObjNavigation);
 }

@@ -15,9 +15,9 @@ public:
 	void Update_TransformationMatrices(_double TimeDelta, _bool _isChange, _uint size);
 	void Update_TransformationMatrices_Next(_double TimeDelta, _bool _isChange, vector<class CChannel*> curAnim);
 
-	
-	_bool Get_IsFinish();// {return m_isFinished; }
-	void Set_IsFinish(_bool isFinished) { m_isFinished = isFinished;  }
+
+	_bool Get_IsFinish();
+	void Set_IsFinish(_bool isFinished) { m_isFinished = isFinished; }
 
 
 	_bool Get_NextFinish() { return m_bNextFinish; }
@@ -39,9 +39,8 @@ private:
 	vector<KEYFRAME>		m_CurKeyFrames;
 	_bool m_bNextFinish = false;
 
-	  _float fRatio = 0;
+	_float fRatio = 0;
 public:
-	//vector<KEYFRAME> Get_keyframe();
 	_bool Get_Finish() { return m_bISFinish; }
 	void Set_Finish(_bool _isFinish) { m_bNextFinish = _isFinish; }
 	void Set_Zero(_uint _value) { m_TimeAcc = _value; }

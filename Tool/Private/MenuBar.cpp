@@ -49,40 +49,6 @@ void CMenuBar::Tick(_double TimeDelta)
 {
 	m_pTransformCom->Set_Scaled(_float3(m_fSizeX, m_fSizeY, 1.f));
 	m_pTransformCom->Set_State(CTransform::STATE_POSITION, XMVectorSet(m_fX - g_iWinSizeX * 0.5f, -m_fY + g_iWinSizeY * 0.5f, 0.0f, 1.f));
-	/*if (GetKeyState(VK_RBUTTON) <0)
-	{
-	CGameInstance*		pGameInstance = CGameInstance::Get_Instance();
-	Safe_AddRef(pGameInstance);
-
-	POINT ptCursor;
-	GetCursorPos(&ptCursor);
-	ScreenToClient(g_hWnd, &ptCursor);
-
-	if (ptCursor.x >= m_fX - m_fSizeX * 0.5f && ptCursor.x <= m_fX + m_fSizeX * 0.5f &&
-	ptCursor.y <= m_fY + m_fSizeY * 0.5f && ptCursor.y >= m_fY - m_fSizeY * 0.5f)
-	{
-	int rc;
-	char *err_msg = 0;
-	sqlite3_stmt *res2 = nullptr;
-
-
-	string sqlTemp = "Delete from " + m_Info.m_Table + "  where Pos_x   =  @m_fX";
-
-	const char* sql2 = sqlTemp.c_str();
-
-	rc = sqlite3_prepare_v2(m_Info.db, sql2, -1, &res2, NULL);
-	int index = sqlite3_bind_parameter_index(res2, "@m_fX");
-	sqlite3_bind_int(res2, index, m_fX);
-	int step = sqlite3_step(res2);
-
-	isDead = true;
-
-	}
-
-	Safe_Release(pGameInstance);
-	}
-	*/
-
 }
 
 void CMenuBar::LateTick(_double TimeDelta)
@@ -110,19 +76,15 @@ HRESULT CMenuBar::Render()
 
 HRESULT CMenuBar::SetUp_Components()
 {
-	/* For.Com_Renderer */
 	if (FAILED(__super::Add_Component(TEXT("Com_Renderer"), LEVEL_STATIC, TEXT("Prototype_Component_Renderer"), (CComponent**)&m_pRendererCom)))
 		return E_FAIL;
 
-	/* For.Com_Texture */
 	if (FAILED(__super::Add_Component(TEXT("Com_Texture"), LEVEL_STATIC, TEXT("Prototype_Component_Texture_MenuBar"), (CComponent**)&m_pTextureCom)))
 		return E_FAIL;
 
-	/* For.Com_Shader */
 	if (FAILED(__super::Add_Component(TEXT("Com_Shader"), LEVEL_STATIC, TEXT("Prototype_Component_Shader_VtxTex"), (CComponent**)&m_pShaderCom)))
 		return E_FAIL;
 
-	/* For.Com_VIBuffer */
 	if (FAILED(__super::Add_Component(TEXT("Com_VIBuffer"), LEVEL_STATIC, TEXT("Prototype_Component_VIBuffer_Rect"), (CComponent**)&m_pVIBufferCom)))
 		return E_FAIL;
 

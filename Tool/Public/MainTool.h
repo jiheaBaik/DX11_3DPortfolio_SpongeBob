@@ -1,7 +1,5 @@
 #pragma once
-//#include "Tool_Defines.h"
 #include "Imgui_Manager.h"
-//#include "Base.h"
 
 BEGIN(Engine)
 class CRenderer;
@@ -17,9 +15,6 @@ class CMainTool final : public CBase
 private:
 	CMainTool();
 	virtual ~CMainTool() = default;
-
-public:
-	//LPDIRECT3DDEVICE9 Get_GraphicDevice() { return m_pGraphic_Device; }
 
 public:
 	HRESULT NativeConstruct();
