@@ -63,7 +63,6 @@ void CBlackBackGround::Tick(_double TimeDelta)
 	Safe_AddRef(pGameInstance);
 
 	m_fDistance = 1.f;
-	//dista = 0;
 	if (GetAsyncKeyState('J') & 0x0001)
 	{
 		m_IsRender = true;
@@ -96,17 +95,6 @@ void CBlackBackGround::Tick(_double TimeDelta)
 
 
 		}
-
-	//	pGameInstance->BGMVolumeDown(m_iCount);
-		/*if (!m_isFirst)
-		{
-			for (int i = 0; i < 60; i++)
-			{
-				if (FAILED(pGameInstance->Clone_GameObject(LEVEL_GAMEPLAY, L"Layer_BubbleUI", TEXT("Prototype_GameObject_BubbleUI"))));
-			}
-
-			m_isFirst = true;
-		}*/
 		
 	}
 

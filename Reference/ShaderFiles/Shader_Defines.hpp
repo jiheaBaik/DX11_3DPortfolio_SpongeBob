@@ -53,14 +53,6 @@ RasterizerState RS_WireFrame
 	CullMode = Back;
 	FrontCounterClockwise = false;
 };
-//BOOL DepthEnable;
-//D3D11_DEPTH_WRITE_MASK DepthWriteMask;
-//	 DepthFunc;
-//BOOL StencilEnable;
-//UINT8 StencilReadMask;
-//UINT8 StencilWriteMask;
-//D3D11_DEPTH_STENCILOP_DESC FrontFace;
-//D3D11_DEPTH_STENCILOP_DESC BackFace;
 
 DepthStencilState DSS_Default
 {
@@ -75,20 +67,9 @@ DepthStencilState DSS_Sky
 	DepthWriteMask = zero;
 };
 
-//BOOL BlendEnable;
-//D3D11_BLEND SrcBlend;
-//D3D11_BLEND DestBlend;
-//D3D11_BLEND_OP BlendOp;
-//D3D11_BLEND SrcBlendAlpha;
-//D3D11_BLEND DestBlendAlpha;
-//D3D11_BLEND_OP BlendOpAlpha;
-//UINT8 RenderTargetWriteMask;
-
 BlendState	BS_Default
 {
 	BlendEnable[0] = false;
-	//SrcBlend = src_alpha;
-	//DestBlend = inv_src_alpha;
 };
 
 

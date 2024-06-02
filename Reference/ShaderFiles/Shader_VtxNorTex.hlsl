@@ -66,9 +66,6 @@ struct PS_OUT
 
 };
 
-
-/* 픽셀의 색을 결정한다. */
-// float4 PS_MAIN(PS_IN In) : SV_TARGET0
 PS_OUT PS_MAIN(PS_IN In)
 {
 	PS_OUT			Out = (PS_OUT)0;

@@ -46,35 +46,32 @@ struct PS_IN
 
 struct PS_OUT
 {
-	float4 vColor : SV_TARGET0;	
+    float4 vColor : SV_TARGET0;
 };
 
-
-/* 픽셀의 색을 결정한다. */
-// float4 PS_MAIN(PS_IN In) : SV_TARGET0
 PS_OUT PS_MAIN(PS_IN In)
 {
-	PS_OUT			Out = (PS_OUT)0; 
+    PS_OUT Out = (PS_OUT) 0;
 
-	Out.vColor = g_DiffuseTexture.Sample(DefaultSampler, In.vTexUV);	
+    Out.vColor = g_DiffuseTexture.Sample(DefaultSampler, In.vTexUV);
 
-	if (Out.vColor.a == 0.f)
-		discard;
+    if (Out.vColor.a == 0.f)
+        discard;
 
-	return Out;
+    return Out;
 }
 
 
 
-technique11			DefaultTechnique
+technique11 DefaultTechnique
 {
-	pass DefaultPass
-	{
-		SetRasterizerState(RS_None);
-		SetDepthStencilState(DSS_Default, 0);
-		SetBlendState(BS_Default, float4(0.f, 0.f, 0.f, 1.f), 0xffffffff);
-		VertexShader = compile vs_5_0 VS_MAIN();
-		GeometryShader = NULL;
-		PixelShader = compile ps_5_0 PS_MAIN();
-	}
+    pass DefaultPass
+    {
+        SetRasterizerState(RS_None);
+        SetDepthStencilState(DSS_Default, 0);
+        SetBlendState(BS_Default, float4(0.f, 0.f, 0.f, 1.f), 0xffffffff);
+        VertexShader = compile vs_5_0 VS_MAIN();
+        GeometryShader = NULL;
+        PixelShader = compile ps_5_0 PS_MAIN();
+    }
 }

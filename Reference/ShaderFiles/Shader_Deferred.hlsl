@@ -26,9 +26,6 @@ texture2D	g_SpecularTexture;
 sampler DefaultSampler = sampler_state 
 {
 	filter = min_mag_mip_linear;
-	//minfilter = linear;
-	//magfilter = linear;
-	//mipfilter = linear;
 };
 
 struct VS_IN
@@ -212,17 +209,11 @@ DepthStencilState DSS_Debug
 {
 	DepthEnable = false;
 	DepthWriteMask = zero;
-	
-	/*DepthEnable = true;
-	DepthWriteMask = all;
-	DepthFunc = less_equal;*/
 };
 
 BlendState	BS_Default
 {
 	BlendEnable[0] = false;
-	//SrcBlend = src_alpha;
-	//DestBlend = inv_src_alpha;
 };
 
 BlendState	BS_Add
@@ -236,18 +227,18 @@ BlendState	BS_Add
 
 
 
-technique11			DefaultTechnique
+technique11 DefaultTechnique
 {
-	pass Debug
-	{
-		SetRasterizerState(RS_Default);
-		SetDepthStencilState(DSS_Debug, 0);
-		SetBlendState(BS_Default, float4(0.f, 0.f, 0.f, 1.f), 0xffffffff);
+    pass Debug
+    {
+        SetRasterizerState(RS_Default);
+        SetDepthStencilState(DSS_Debug, 0);
+        SetBlendState(BS_Default, float4(0.f, 0.f, 0.f, 1.f), 0xffffffff);
 
-		VertexShader = compile vs_5_0 VS_MAIN();
-		GeometryShader = NULL;
-		PixelShader = compile ps_5_0 PS_MAIN_DEBUG();
-	}
+        VertexShader = compile vs_5_0 VS_MAIN();
+        GeometryShader = NULL;
+        PixelShader = compile ps_5_0 PS_MAIN_DEBUG();
+    }
 
 	pass Light_Directional
 	{

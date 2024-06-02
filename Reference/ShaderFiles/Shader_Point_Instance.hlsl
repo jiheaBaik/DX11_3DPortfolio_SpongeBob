@@ -100,17 +100,11 @@ struct PS_OUT
 	float4 vColor : SV_TARGET0;	
 };
 
-
-/* 픽셀의 색을 결정한다. */
-// float4 PS_MAIN(PS_IN In) : SV_TARGET0
 PS_OUT PS_MAIN(PS_IN In)
 {
 	PS_OUT			Out = (PS_OUT)0; 
 
 	Out.vColor = g_DiffuseTexture.Sample(DefaultSampler, In.vTexUV);
-
-	/*Out.vColor.gb = 0.f;
-	Out.vColor.r = 1.f;*/
 
 	if (Out.vColor.a == 0.f)
 		discard;
